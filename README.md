@@ -1,1 +1,1 @@
-# Estudo-B-sico-Javascript
+# Estudo-Basico-Javascript
