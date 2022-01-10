@@ -46,7 +46,6 @@ function nome() {
 
     console.log("Fora do if " + nome); 
 } // Fim da função
-
 nome();
 
 //Vamos criar um for para os anos até 2022 utilizando var e let.
