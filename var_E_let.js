@@ -48,3 +48,17 @@ function nome() {
 } // Fim da função
 
 nome();
+
+//Vamos criar um for para os anos até 2022 utilizando var e let.
+for(var i = 2000; i <= 2005; i++) {
+    console.log(i); // O correto seria ir de 2000 a 2005
+}
+console.log("Fora do for " + i); // Aqui ele lê a variavel mais uma vez, sendo 2006
+
+
+// Agora com let 
+for(let i = 2000; i <= 2005; i++) {
+    console.log(i); // O correto seria ir de 2000 a 2005
+}
+
+console.log("Fora do for " + i); // Vai dar erro pq eu não deveria chamar fora do for
