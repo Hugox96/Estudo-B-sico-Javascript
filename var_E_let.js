@@ -13,6 +13,9 @@
 
 //Vamos ver um exemplo disto.
 
+
+//Site para estudar: https://hcode.com.br/blog/entenda-a-diferenca-entre-var-let-e-const-no-javascript
+
 function nome() {
     // 1º Declaração
     var nome = "Hugo";
