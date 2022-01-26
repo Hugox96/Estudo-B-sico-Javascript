@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interagindo com o usuário</title>
+    <style>
+        body{font: 12pt}
+        button{font-size: 12pt; padding: 10px;}
+    </style>
+</head>
+
+<body>
+    <h1> Interagindo com usuario </h1>
+    <button onclick= "Clique()">Clique Aqui se tiver coragem</button>
+
+    <script>
+        function Clique(){
+            let nome = window.prompt('Qual seu nome');
+            window.alert(`Olá ${nome}, bem vindo`);
+        }
+    </script>
+    
+</body>
+</html>
