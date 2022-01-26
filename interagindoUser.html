@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Interagindo com o usuário</title>
+    <!--Aqui edito a parte visual do exercicio-->
     <style>
         body{font: 12pt}
         button{font-size: 12pt; padding: 10px;}
@@ -12,13 +13,16 @@
 </head>
 
 <body>
+    <!-- Texto de apresentação-->
     <h1> Interagindo com usuario </h1>
+    <!--Aqui onde ocorre a conexão do Html com o javascript -->
     <button onclick= "Clique()">Clique Aqui se tiver coragem</button>
-
+    <!--Começa o código em javascript-->
     <script>
+        //Função clique criando no onclick
         function Clique(){
-            let nome = window.prompt('Qual seu nome');
-            window.alert(`Olá ${nome}, bem vindo`);
+            let nome = window.prompt('Qual seu nome'); // salva a variável
+            window.alert(`Olá ${nome}, bem vindo`); //chama e apresenta a variavel para o usuário
         }
     </script>
     
