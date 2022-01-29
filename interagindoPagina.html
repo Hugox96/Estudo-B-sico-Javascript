@@ -12,18 +12,19 @@
         body{font: 12pt}
         button{font-size: 12pt; padding: 30px} 
     </style>
-
     <h1> Interagindo com a página </h1>
-    <button onclick="Inicio()"> Clique Aqui </button>
+    <button onclick="Inicio()"> Clique Aqui </button> <!-- Inicializando a função-->
+    
+    <!-- Com essa id podemos substituir mais tarde-->
     <section id="Mensagem">
         <p> A mensagem abaixo será substituida</p>
     </section>
-
+   <!-- Criando a função inicio -->
     <script>
         function Inicio(){
             let nome = window.prompt("Qual seu nome");
-            let res = window.document.getElementById("Mensagem")
-            res.innerHTML = `<p> Ola, ${nome}. Bem vindo a pagina!`
+            let res = window.document.getElementById("Mensagem") //Pegando o id  mensagem para editar 
+            res.innerHTML = `<p> Ola, ${nome}. Bem vindo a pagina!` //Substituindo a mensagem pela variavel nome
             }
     </script>
     
