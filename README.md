@@ -8,7 +8,7 @@ O 1º Exercicio é criando uma interação com o Html e Javascript por meio de f
 
 A ideia deste exercicio é criar uma interação com a página do Html com a parte do Javascript por meio de um botão que chama uma função. Vamos ver como o resultado ficou e explicar os trechos mais importantes.
 
-![Alt Text](https://user-images.githubusercontent.com/62472486/118557490-a2f74680-b73b-11eb-9e50-350fe5c9bc5e.gif)
+![Alt Text](https://user-images.githubusercontent.com/62472486/151851572-e5d1ee70-3189-4812-bfa9-2e84cc3f9210.gif)
 
 
 
