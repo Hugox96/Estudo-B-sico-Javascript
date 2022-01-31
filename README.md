@@ -29,8 +29,24 @@ A parte visual do Html fica dentro da tag <body> e com ela criamos o botão e o 
         </section>
   
   E temos esse resultado:
-  
-   (https://user-images.githubusercontent.com/62472486/151853036-bee2406a-327a-4227-8f57-f5ae070aedaa.png)
+   
+  <p align="center">
+  <img width="400" height="200" src= "https://user-images.githubusercontent.com/62472486/151853036-bee2406a-327a-4227-8f57-f5ae070aedaa.png">
+  </p>
+   
+   Depois temos a parte mais importante, na tag button onclick iremos chamar uma função que será criada para substituir a mensagem na tela inicial com a interação do usuário.
+   Para isso vamos criar a função no <script>, como no código abaixo:
+   
+    <script>
+        function Inicio(){
+            let nome = window.prompt("Qual seu nome"); // Recebe o nomeda variavel
+            let res = window.document.getElementById("Mensagem") //Pegando o id  mensagem para editar 
+            res.innerHTML = `<p> Ola, ${nome}. Bem vindo a pagina!` //Substituindo a mensagem pela variavel nome
+            }
+    </script>
+   
+   Temos a variavel nome que irá receber a resposta do usuário, o getElementById que pega o Id que foi criado e a modifica com uma nova mensagem e para finalizar temos
+   o res.innerHtml que substituiu a mensagem do Id para a nova mensagem com o nome do usuário.
 
 
 
