@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculando a media de um aluno</title>
+</head>
+<body>
+    <!--Parte visual do exercicio -->
+    <style>
+        body{font: 18pt}
+        button{font-size: 12pt; padding: 30px; font-weight: 100;} 
+    </style>
+    <h1> Calculando a media de um aluno </h1>
+    <button onclick="Mean()"> Clique Aqui </button> <!-- Inicializando a função-->
+    
+    <!-- Com essa id podemos substituir mais tarde-->
+    <section id="Media">
+        <p> A mensagem abaixo será substituida</p>
+    </section>
+   <!-- Criando a função inicio -->
+    <script>
+        function Mean(){
+            let nome = window.prompt("Qual seu nome ?")
+            let num1 = Number(window.prompt(`Qual a 1º nota de ${nome} ?`))
+            let num2 = Number(window.prompt(`Qual a 2º nota de ${nome} ?`))
+            media = (num1+num2)/2 // calculo da média, importante se atentar a ordem dos parenteses
+
+            let res = window.document.getElementById("Media") //Pegando o id  mensagem para editar 
+
+            res.innerHTML = `<p> Ola, ${nome}. Sua primeira nota é <mark> ${num1} </mark> !<p>` //Substituindo a mensagem pela variavel nome
+            res.innerHTML += `<p> Sua segundo nota foi <mark> ${num2}</mark> <p>` // O sinal += é importante para não apagar a mensagem anterior
+            res.innerHTML += `<p> Sua média é <mark> ${media} <mark> </p>`
+
+            }
+    </script>
+    
+</body>
+</html>
