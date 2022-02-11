@@ -8,6 +8,9 @@
 </head>
 <body>
     
+<!-- Fonte do exercicio:
+ https://www.javascriptprogressivo.net/2018/07/Recebendo-Valor-Usuario-Formulario-Input-JavaScript.html -->
+
  <h1> Aprendendo sobre Input </h1>
  <p> Digite qualquer coisa no campo e pressione o botão</p>
  <input id="textoInput" name="textinput" value="" type="text">
@@ -15,6 +18,10 @@
 
  <script>
      function enviar() {
+        // Essa função simplesmente vai no documento (document) 
+        // e pega um elemento pelo id (getElementById), 
+        // especificamente o elemento textinput (nosso formulário input), 
+        // copia seu valor (.value) e atribui a variável valor.
          let valor = document.getElementById("textoInput").value
          alert("Voce digitou " + valor)
      }
