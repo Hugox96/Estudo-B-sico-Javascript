@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabuada de qualquer número</title>
+</head>
+<body>
+    <h1> Tabuada do número: </h1>
+    <input id="numero" type="number"> 
+    <button onclick="tabuada()">Exibir</button>
+    <p>Tabuada:</p>
+    <section id="resultado">
+        <p> O resultado aparecerá aqui </p>
+    </section>
+
+    <script>
+        function tabuada(){
+            let num = parseInt(document.getElementById("numero").value);
+            let resultado = document.getElementById("resultado");
+            let tabuada = "";
+
+            for( let i=1; i<=10; i++){
+                tabuada += num+ " vs " +i+ "=" +
+                 num*i+ "<br>";
+
+            resultado.innerHTML = tabuada;
+            }
+
+        }
+    </script>
+    
+</body>
+</html>
