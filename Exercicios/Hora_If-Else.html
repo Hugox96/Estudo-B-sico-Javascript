@@ -9,27 +9,24 @@
 <body>
 
      <h2> Vamos mostrar uma mensagem na tela de acordo com a hora</h2>
-     
      <p> Vamos mudar a mensagem na tela abaixo</p>
      <p id="tela"> </p>
 
      <script>
-         const hora = new Date().getHours();
+         let hora = new Date().getHours();
          let mensagem;
-
+         // Primeira condição do if, caso a hora seja menor que 13h a mensagem aperecerá na tela
          if(hora < 13) 
          {
              mensagem = "Antes de 13h, então bom dia"
          }
-
+         // Caso a condição do if seja falsa, a mensagem do elsa aperecerá na tela
          else {
              mensagem = "Depois de 13h, então boa tarde";
          }
-
+         // Pega a id tela e substitui pela variavel mensagem presente no if e else
          document.getElementById("tela").innerHTML = mensagem;
-         
-    </script>
-
-    
+         // É importante notar que se mudar para mensagem =..., não irá funcionar        
+    </script>  
 </body>
 </html>
