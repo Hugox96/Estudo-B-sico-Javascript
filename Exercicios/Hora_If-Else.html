@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>If and Else</title>
+</head>
+<body>
+
+     <h2> Vamos mostrar uma mensagem na tela de acordo com a hora</h2>
+     
+     <p> Vamos mudar a mensagem na tela abaixo</p>
+     <p id="tela"> </p>
+
+     <script>
+         const hora = new Date().getHours();
+         let mensagem;
+
+         if(hora < 13) 
+         {
+             mensagem = "Antes de 13h, então bom dia"
+         }
+
+         else {
+             mensagem = "Depois de 13h, então boa tarde";
+         }
+
+         document.getElementById("tela").innerHTML = mensagem;
+         
+    </script>
+
+    
+</body>
+</html>
