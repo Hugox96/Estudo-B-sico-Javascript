@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aposentadoria Exercicio</title>
+</head>
+<body>
+     
+     <h2> Calculando o tempo de aposentadoria</h2>
+     <p> Qual a sua idade ?</p>
+     <input id= "idade" type="number">
+     <button onclick="aposentadoria()"> Calcular </button> 
+
+     <script>
+         function aposentadoria()
+         {
+             let pessoa = parseInt(document.getElementById("idade").value);
+
+             if(pessoa >= 65)
+             {
+                 alert("Parabéns já pode se aposentar")
+
+             }
+
+             else {
+                 alert("Ainda falta " + (65- pessoa) + " anos para se aposentar");
+             }
+
+         }
+     </script>
+    
+</body>
+</html>
