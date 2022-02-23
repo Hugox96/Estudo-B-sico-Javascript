@@ -10,12 +10,13 @@
      
      <h2> Calculando o tempo de aposentadoria</h2>
      <p> Qual a sua idade ?</p>
-     <input id= "idade" type="number">
-     <button onclick="aposentadoria()"> Calcular </button> 
+     <input id= "idade" type="number"> <!--Input para receber o valor-->
+     <button onclick="aposentadoria()"> Calcular </button> <!-- Botão para chamar a função -->
 
      <script>
          function aposentadoria()
          {
+             // Recebendo o dado do usuário e trasformando em inteiro, depois passando para a variavel pessoa
              let pessoa = parseInt(document.getElementById("idade").value);
 
              if(pessoa >= 65)
