@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Idade para voltar</title>
+</head>
+<body>
+        <center>
+            <h1 style="color:tomato">
+             Calculando idade para votar   
+            </h1>
+
+            <h2>
+                Vamos saber se você pode votar de acorodo com a sua idade
+            </h2>
+
+            <input id="voto" type="number">
+            <button onclick="eleicao()"> Calcule </button> 
+
+             <script> 
+             function eleicao(){
+                 let pessoa = parseInt(document.getElementById("voto").value);
+
+                 if(pessoa < 16){
+                     alert("Ainda não pode votar")
+                 }
+
+                 else{
+                        if(pessoa <18) {
+                            alert("O voto é facultativo")
+                        }
+
+                         else{
+                            if(pessoa > 65){
+                                alert("O voto é facultativo também")
+                            }
+        
+                           else {
+                            alert("Voto é obrigatório")
+                           }
+                         }
+               }
+             }
+            </script>            
+        </center>  
+</body>
+</html>
+
