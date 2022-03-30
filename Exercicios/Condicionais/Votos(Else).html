@@ -1,50 +1,59 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Idade para voltar</title>
 </head>
+
 <body>
-        <center>
-            <h1 style="color:tomato">
-             Calculando idade para votar   
-            </h1>
+    <center>
+        <h1 style="color:tomato">
+            Calculando idade para votar
+        </h1>
 
-            <h2>
-                Vamos saber se você pode votar de acorodo com a sua idade
-            </h2>
+        <h2>
+            Vamos saber se você pode votar de acorodo com a sua idade
+        </h2>
 
-            <input id="voto" type="number">
-            <button onclick="eleicao()"> Calcule </button> 
+        <input id="voto" type="number">
+        <button onclick="eleicao()"> Calcule </button>
+        <section id="idade" style='display:inline'>
+            <p> Vamos descobrir se você precisa votar </p>
+        </section>
 
-             <script> 
-             function eleicao(){
-                 let pessoa = parseInt(document.getElementById("voto").value);
+        <script>
+            function eleicao() {
+                // Aqui ele recebe o dado do input, transforma em inteiro e atribui a variavel pessoa
+                let pessoa = parseInt(document.getElementById("voto").value);
+                //Aqui ele pega o id da section, transforma em variavel para ser usada depois
+                let idade = document.getElementById("idade");
 
-                 if(pessoa < 16){
-                     alert("Ainda não pode votar")
-                 }
+                if (pessoa < 16) {
+                    //Vamos subistituir o id da section por um texto
+                    idade.innerHTML = `<p> Você ainda não pode votar <p>`
+                }
 
-                 else{
-                        if(pessoa <18) {
-                            alert("O voto é facultativo")
+                else {
+                    if (pessoa < 18) {
+                        idade.innerHTML = `<p> O voto é facultativo <p>`
+                    }
+
+                    else {
+                        if (pessoa >= 65) {
+                            idade.innerHTML = `<p> O voto é facultativo também <p>`
                         }
 
-                         else{
-                            if(pessoa > 65){
-                                alert("O voto é facultativo também")
-                            }
-        
-                           else {
-                            alert("Voto é obrigatório")
-                           }
-                         }
-               }
-             }
-            </script>            
-        </center>  
+                        else {
+                            idade.innerHTML = `<p>Voto é obrigatório<p>`
+                        }
+                    }
+                }
+            }
+        </script>
+    </center>
 </body>
-</html>
 
+</html>
