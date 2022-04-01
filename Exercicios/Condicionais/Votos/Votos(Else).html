@@ -5,29 +5,35 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    
     <title>Idade para voltar</title>
 </head>
 
 <body>
     <center>
-        <h1 style="color:rgb(175, 45, 22)">
+        <h1 style="color:rgb(241, 229, 227)">
             Calculando idade para votar
         </h1>
-
+<br>
         <h2>
             Vamos saber se você pode votar de acordo com a sua idade
         </h2>
-        
+<br>
+
         <!-- Novo input para aprender a editar -->
         <div class="form">
-            <input type="text" id="email" class="form__input" autocomplete="off" placeholder=" ">
-            <label for="email" class="form__label">Email</label>
+            <input type="number" id="voto" class="form__input" autocomplete="off" placeholder=" ">
+            <label for="voto" class="form__label">Idade</label>     
           </div>
+<br>
+        <!-- <input id="voto" type="number"> -->
+        <button onclick="eleicao()"> Calcule <br> </button>
+ <br>
 
-        <input id="voto" type="number">
-        <button onclick="eleicao()"> Calcule </button>
-        <section id="idade" style='display:inline'>
-            <p> Vamos descobrir se você precisa votar </p>
+        <section  id="idade" style='display:inline'>
+            <br>
+            <h3 style="color: aliceblue;"> Vamos descobrir se você precisa votar </h3>
         </section>
 
         <script>
@@ -35,10 +41,12 @@
                 // Aqui ele recebe o dado do input, transforma em inteiro e atribui a variavel pessoa
                 let pessoa = parseInt(document.getElementById("voto").value);
                 //Aqui ele pega o id da section, transforma em variavel para ser usada depois
+                
                 let idade = document.getElementById("idade");
 
                 if (pessoa < 16) {
                     //Vamos subistituir o id da section por um texto
+                    
                     idade.innerHTML = `<p> Você ainda não pode votar <p>`
                 }
 
