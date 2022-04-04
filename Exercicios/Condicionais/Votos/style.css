@@ -56,6 +56,15 @@ body {
   
 }
 
+/*Editando o id idade para melhorar o design da resposta do usuário */
+#idade { 
+  color: white;
+  padding: 20px;
+  text-align: center;
+  font-size: medium;
+
+}
+
 /* 
 1. When the input is in the focus state
 reduce the size of the label and move upwards 
