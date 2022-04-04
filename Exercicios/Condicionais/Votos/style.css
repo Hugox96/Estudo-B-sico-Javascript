@@ -56,10 +56,33 @@ body {
   
 }
 
+/* Vou melhorar depois */
+.btn {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: #a3b3d6;
+  color: black;
+  font-size: 16px;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  text-align: center;
+}
+
+/* Vou melhorar */
+.btn:hover {
+  background-color: black;
+  color: white;
+}
+
 /*Editando o id idade para melhorar o design da resposta do usuário */
 #idade { 
   color: white;
-  padding: 20px;
+  padding: 30px;
   text-align: center;
   font-size: medium;
 
