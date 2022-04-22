@@ -19,12 +19,14 @@ A parte visual do Html fica dentro da tag <body> e com ela criamos o botão e o 
              body{font: 12pt}
              button{font-size: 12pt; padding: 30px} 
          </style>
+   
          <!-- Mensagem na pagina-->
          <h1> Interagindo com a página </h1>
-         <button onclick="Inicio()"> Clique Aqui </button> <!-- Inicializando a função-->
+            <button onclick="Inicio()"> Clique Aqui </button> <!-- Inicializando a função-->
+   
          <!-- Com essa id podemos substituir mais tarde-->
          <section id="Mensagem">
-           <p> A mensagem abaixo será substituida</p>
+            <p> A mensagem abaixo será substituida</p>
         </section>
   
   E temos esse resultado:
@@ -48,6 +50,15 @@ A parte visual do Html fica dentro da tag <body> e com ela criamos o botão e o 
    1º Temos a variável <b> let nome </b> que irá receber a resposta do usuário. <br>
    2º O <b> getElementById </b> que pega o Id(Mensagem) que foi criado e a modifica com uma nova mensagem. <br>
    3º Finalizar temos o <b> res.innerHtml </b >que substituiu a mensagem do Id para a nova mensagem com o nome do usuário.
+   
+   ## Criando uma Tabuada em Javascript e Html
+   
+   O próximo código em javascript que considero interessante é a tabuada. Nele podemos treinar a integração com o Html e Javacript além de utilizar a estrutura    for para realizar o cálculo.
+   
+   
+   
+   
+   
    
    
    
