@@ -31,6 +31,8 @@ A parte visual do Html fica dentro da tag <body> e com ela criamos o botão e o 
   
   E temos esse resultado:
    
+   
+   
   <p align="center">
   <img width="400" height="200" src= "https://user-images.githubusercontent.com/62472486/151853036-bee2406a-327a-4227-8f57-f5ae070aedaa.png">
   </p>
@@ -54,6 +56,8 @@ A parte visual do Html fica dentro da tag <body> e com ela criamos o botão e o 
    ## Criando uma Tabuada em Javascript e Html
    
    O próximo código em javascript que considero interessante é a tabuada. Nele podemos treinar a integração com o Html e Javacript além de utilizar a estrutura    for para realizar o cálculo.
+   
+   Vamos ver como fica o resultado final e explicar o código a seguir:
    
    
    
