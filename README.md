@@ -68,13 +68,13 @@ A parte visual do Html fica dentro da tag <body> e com ela criamos o botão e o 
            <input id="numero" type="number"> 
            <button onclick="tabuada()">Exibir</button>
            <button onclick="limpar()">Limpar</button>
-       <!--<button onclick="zerar()">Limpar</button> -->
-       <p>Tabuada:</p>
+      <p>Tabuada:</p>
 
        <section id="resultado" style='display:inline'>
            <p> O resultado aparecerá aqui </p>
        </section>
 
+    
          
    
 
