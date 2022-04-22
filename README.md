@@ -6,7 +6,7 @@ O 1º Exercicio é criando uma interação com o Html e Javascript por meio de f
 
 ## Interação com a página Html
 
-A ideia deste exercicio é criar uma interação com a página do Html com a parte do Javascript por meio de um botão que chama uma função. Vamos ver como o resultado ficou e explicar os trechos mais importantes.
+A ideia deste exercicio é criar uma interação com a página do Html com a parte do Javascript por meio de um botão que chama uma função. Vamos ver como o resultado final é e explicarei os trechos mais importantes abaixo.
 
 ![Alt Text](https://user-images.githubusercontent.com/62472486/151851572-e5d1ee70-3189-4812-bfa9-2e84cc3f9210.gif)
 
@@ -37,7 +37,7 @@ A parte visual do Html fica dentro da tag <body> e com ela criamos o botão e o 
    
     <script>
         function Inicio(){
-            let nome = window.prompt("Qual seu nome"); // Recebe o nomeda variavel
+            let nome = window.prompt("Qual seu nome"); // Recebe o nome da variável
             let res = window.document.getElementById("Mensagem") //Pegando o id  mensagem para editar 
             res.innerHTML = `<p> Ola, ${nome}. Bem vindo a pagina!` //Substituindo a mensagem pela variavel nome
             }
@@ -45,10 +45,12 @@ A parte visual do Html fica dentro da tag <body> e com ela criamos o botão e o 
    
    Então temos 3 coisas importantes:
    
-   1º Temos a variável let nome que irá receber a resposta do usuário. <br>
-   2º O getElementById que pega o Id(mensagem) que foi criado e a modifica com uma nova mensagem. <br>
-   3º Finalizar temos o res.innerHtml que substituiu a mensagem do Id para a nova mensagem com o nome do usuário.
-      
+   1º Temos a variável <b> let nome </b> que irá receber a resposta do usuário. <br>
+   2º O <b> getElementById </b> que pega o Id(Mensagem) que foi criado e a modifica com uma nova mensagem. <br>
+   3º Finalizar temos o <b> res.innerHtml </b >que substituiu a mensagem do Id para a nova mensagem com o nome do usuário.
+   
+   
+   
 
 
 
