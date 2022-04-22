@@ -16,13 +16,12 @@ A parte visual do Html fica dentro da tag <body> e com ela criamos o botão e o 
    
          <!--Parte visual do exercicio -->
           <style>
-          body{font: 12pt}
-          button{font-size: 12pt; padding: 30px} 
+             body{font: 12pt}
+             button{font-size: 12pt; padding: 30px} 
          </style>
          <!-- Mensagem na pagina-->
          <h1> Interagindo com a página </h1>
          <button onclick="Inicio()"> Clique Aqui </button> <!-- Inicializando a função-->
-    
          <!-- Com essa id podemos substituir mais tarde-->
          <section id="Mensagem">
            <p> A mensagem abaixo será substituida</p>
@@ -34,8 +33,7 @@ A parte visual do Html fica dentro da tag <body> e com ela criamos o botão e o 
   <img width="400" height="200" src= "https://user-images.githubusercontent.com/62472486/151853036-bee2406a-327a-4227-8f57-f5ae070aedaa.png">
   </p>
    
-   Depois temos a parte mais importante, na tag button onclick iremos chamar uma função que será criada para substituir a mensagem na tela inicial com a interação do usuário.
-   Para isso vamos criar a função no <script>, como no código abaixo:
+   Depois temos a parte mais importante, na tag <b> button onclick </b> iremos chamar uma função que será criada para substituir a mensagem na tela inicial com    a interação do usuário.  Para isso vamos criar a função no <script>, onde a parte lógica entra, como no código abaixo:
    
     <script>
         function Inicio(){
@@ -45,8 +43,12 @@ A parte visual do Html fica dentro da tag <body> e com ela criamos o botão e o 
             }
     </script>
    
-   Temos a variavel nome que irá receber a resposta do usuário, o getElementById que pega o Id que foi criado e a modifica com uma nova mensagem e para finalizar temos
-   o res.innerHtml que substituiu a mensagem do Id para a nova mensagem com o nome do usuário.
+   Então temos 3 coisas importantes:
+   
+   1º Temos a variável let nome que irá receber a resposta do usuário. <br>
+   2º O getElementById que pega o Id(mensagem) que foi criado e a modifica com uma nova mensagem. <br>
+   3º Finalizar temos o res.innerHtml que substituiu a mensagem do Id para a nova mensagem com o nome do usuário.
+      
 
 
 
