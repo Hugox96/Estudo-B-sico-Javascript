@@ -61,6 +61,20 @@ A parte visual do Html fica dentro da tag <body> e com ela criamos o botão e o 
    
      
    ![tabuada](https://user-images.githubusercontent.com/62472486/164797410-49b90f10-e295-406d-9e93-87ee5177847d.gif)
+   
+   A criação é bem simples, só precisamos de um texto, um input e um botão para chamar a função que realiza o cálculo:
+   
+      <h1>Tabuada de qualquer número: </h1>
+           <input id="numero" type="number"> 
+           <button onclick="tabuada()">Exibir</button>
+           <button onclick="limpar()">Limpar</button>
+       <!--<button onclick="zerar()">Limpar</button> -->
+       <p>Tabuada:</p>
+
+       <section id="resultado" style='display:inline'>
+           <p> O resultado aparecerá aqui </p>
+       </section>
+
          
    
 
