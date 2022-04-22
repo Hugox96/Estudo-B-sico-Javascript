@@ -74,6 +74,26 @@ A parte visual do Html fica dentro da tag <body> e com ela criamos o botão e o 
            <p> O resultado aparecerá aqui </p>
        </section>
 
+   Na parte do scritp é só utilizar o for para realizar o cálculo dos números de 1 a 10, ou qualquer outro intervalo que escolher.
+   
+   <script>
+        function tabuada(){
+            //transformao valor no input em um inteiro e depois atribui o valor na variavel num
+            let num = parseInt(document.getElementById("numero").value);
+            
+            // Pega o id resultado para ser mostrada na tela          
+            let resultado = document.getElementById("resultado");
+            let tabuada = ""; // tabuada é vazia pois irá receber os resultados
+
+            for( let i=1; i<=10; i++){
+                tabuada += num+ " X " +i+ "=" + // A estrutura do código que aparece na tela
+                 num*i+ "<br>"; // logica do calculo
+                 resultado.innerHTML = tabuada; // pega o id resultado para mostrar na tela
+            }
+        }
+
+        function limpar(){document.getElementById("numero").value = "";} // limpa o input
+  </script>
     
          
    
