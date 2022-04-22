@@ -59,8 +59,11 @@ A parte visual do Html fica dentro da tag <body> e com ela criamos o botão e o 
    
    Vamos ver como fica o resultado final e explicar o código a seguir:
    
+     
+   ![tabuada](https://user-images.githubusercontent.com/62472486/164797410-49b90f10-e295-406d-9e93-87ee5177847d.gif)
+         
    
-   
+
    
    
    
