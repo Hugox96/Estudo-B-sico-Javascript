@@ -95,6 +95,10 @@ A parte visual do Html fica dentro da tag <body> e com ela criamos o botão e o 
 
               function limpar(){document.getElementById("numero").value = "";} // limpa o input
         </script>
+            
+
+## Calculando a idade de votar com if and else
+            
 
          
    
