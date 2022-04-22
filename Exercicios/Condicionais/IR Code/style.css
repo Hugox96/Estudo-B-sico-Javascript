@@ -68,16 +68,16 @@ nav{
 
 .conteudo{
     text-align: center;
-    background: rgba(3, 3, 3, 0.8); /* Edit the banner color*/
+    background: rgba(3, 3, 3, 0.8);
     display: inline-block;
     padding: 30px;
-    height: 60%;
+    height: 50%;
     border-radius: 50px;  
     text-align: center;
     position: absolute;
     left: 30%;
     /* Quanto mais alto o valor do top, mais baixo o container ficará */
-    top: 63%;
+    top: 60%;
     width: 40%;
     max-width: 450px;
     transform: translate(10%, -10%);
@@ -115,4 +115,12 @@ nav{
     padding: 15px 40px;
     border:none;
     border-radius:6px;
+}
+
+#imposto{
+    color: rgb(238, 236, 236);
+    padding: 10px;
+    margin-top: 40px;
+    text-align: center;
+    font-size: large;
 }

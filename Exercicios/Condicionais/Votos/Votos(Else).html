@@ -39,13 +39,11 @@
             function eleicao() {
                 // Aqui ele recebe o dado do input, transforma em inteiro e atribui a variavel pessoa
                 let pessoa = parseInt(document.getElementById("voto").value);
-                //Aqui ele pega o id da section, transforma em variavel para ser usada depois
-                
+                //Aqui ele pega o id da section, transforma em variavel para ser usada depois com a interação do usuário
                 let idade = document.getElementById("idade");
 
                 if (pessoa < 16) {
-                    //Vamos subistituir o id da section por um texto
-                    
+                    //Vamos subistituir o id da section por um texto, ao invés do console.log
                     idade.innerHTML = `<p> Você ainda não pode votar <p>`
                 }
 

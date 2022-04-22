@@ -1,7 +1,5 @@
 let salario = 3000
 
-
-
 if (salario < 1903) {
   console.log(" É isento de imposto de renda")
 }

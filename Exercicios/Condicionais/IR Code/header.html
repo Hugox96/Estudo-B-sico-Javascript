@@ -28,24 +28,59 @@
                No Brasil, os trabalhadores tiveram que trabalhar 149 dias em 2021 apenas para pagar impostos. Para piorar, boa parte desses impostos é aplicada sobre o consumo, o que penaliza principalmente os mais pobres, já que no país a taxação sobre a renda é menor. 
                O sistema tributário brasileiro também é um dos mais complexos do mundo, com bitributação e impostos indiretos sobre as empresas e cidadões.  
           </p>
-
+                   
      </article>
     
-      
-     
      <div class="conteudo">
           <h1> Calculadora Online de Imposto de Renda Pessoa Física </h1>
           <form>
-               <input type= "text" placeholder= "&#x270e; Sua Renda"> 
-               <button type="submit"> Calcular </button>
+               <input type= "number" id="renda" placeholder= "Sua Renda"> 
+               <button type="button" onclick="calculo()"> Calcular </button>
           </form>
+
+               <section id="imposto"> </section> 
      </div>
-     
+                 
+     <script>
+          function calculo() {
+
+               let salario = parseInt(document.getElementById("renda").value);
+               let imposto = document.getElementById("imposto");
+
+               if (salario < 1903) {
+                //console.log("É isento de imposto de renda")
+                imposto.innerHTML =  `<p> É isento de imposto de renda <p>`
+               }
 
 
+               else {
+               if (1903 <= salario && salario < 2826) {
+               var faixa1 = salario*3 
+               // console.log(`É descontado 7,5%, ${faixa1}`
+               imposto.innerHTML =  `<p> É descontado 7,5%, ${faixa1} <p>`
+               }
 
-   </div> 
+               else {
+               if (2826 <= salario && salario <= 3751) {
+                    var faixa2 = (0.15 * salario) - 354.80
+                    console.log(`É descontado 15%, ${faixa2}`)
+               }
 
+               else {
+                    if (3751 <= salario && salario <= 4664) {
+                    console.log("É descontado 22,5%")
+                    }
 
+                    else {
+                    console.log("É descontado 27,5%")
+                    }
+                 }
+               }
+             }
+             return false;
+          }
+     </script>
+
+</div> 
     
 </body>
