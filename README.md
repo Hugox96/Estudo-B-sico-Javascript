@@ -101,7 +101,9 @@ A parte visual do Html fica dentro da tag <body> e com ela criamos o botão e o 
             
 Nesse próximo código criei uma página que diz ao usuário o status do voto de acordo com a idade. De bem simples, é só colocar a idade que a mensagem aparece na tela.
 
-Para criar o código em javascript utilizei os condicionais <b> If and Else </b>. Vamos ver como funciona abaixo:            
+Para criar o código em javascript utilizei os condicionais <b> If and Else </b>. Vamos ver como funciona abaixo:
+
+![20220422_200824](https://user-images.githubusercontent.com/62472486/164860982-1a000c5d-fd1d-4a10-b929-5b15689f03f0.gif)
          
    
 
