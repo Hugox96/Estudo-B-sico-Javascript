@@ -104,6 +104,11 @@ Nesse próximo código criei uma página que diz ao usuário o status do voto de
 Para criar o código em javascript utilizei os condicionais <b> If and Else </b>. Vamos ver como funciona abaixo:
 
 ![20220422_200824](https://user-images.githubusercontent.com/62472486/164860982-1a000c5d-fd1d-4a10-b929-5b15689f03f0.gif)
+            
+Podemos ver que a página está com um visual diferente, isso porque dessa vez eu utilizei o CSS para estilizar o design junto com o HTML. Mas como o ideia é estudar sobre javascript no repositório, irei continuar mostrando o código para avaliar a idade do usuário.
+            
+            
+            
          
    
 
