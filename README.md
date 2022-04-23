@@ -99,7 +99,9 @@ A parte visual do Html fica dentro da tag <body> e com ela criamos o botão e o 
 
 ## Calculando a idade de votar com if and else
             
+Nesse próximo código criei uma página que diz ao usuário o status do voto de acordo com a idade. De bem simples, é só colocar a idade que a mensagem aparece na tela.
 
+Para criar o código em javascript utilizei os condicionais <b> If and Else </b>. Vamos ver como funciona abaixo:            
          
    
 
