@@ -44,11 +44,10 @@
      <script>
           function calculo() {
 
-               let salario = parseFloat(document.getElementById("renda").value);
-               let imposto = document.getElementById("imposto");
+               let salario = parseFloat(document.getElementById("renda").value)
+               let imposto = document.getElementById("imposto")
 
                if (salario < 1903) {
-                //console.log("É isento de imposto de renda")
                 imposto.innerHTML =  `<p> É isento de imposto de renda <p>`
                }
 
@@ -57,26 +56,28 @@
                if (1903 <= salario && salario < 2826) {
                var faixa2 = (0.075 * salario) - 142.80
                faixa2 = faixa2.toFixed(2)
-               // console.log(`É descontado 7,5%, ${faixa1}`
                imposto.innerHTML =  `<p> É descontado 7,5%, valor a ser pago R$: ${faixa2} <p>`
                }
 
                else {
                if (2826 <= salario && salario <= 3751) {
                     var faixa3 = (0.15 * salario) - 354.80
-                    faixa3= faixa3.toFixed(2);
-
-               // console.log(`É descontado 15%, ${faixa3}`)
-               imposto.innerHTML =  `<p> Com esse valor é descontado 15%, valor a ser pago R$: ${faixa3} <p>`
+                    faixa3= faixa3.toFixed(2)
+                    imposto.innerHTML =  `<p> Com esse valor é descontado 15%, valor a ser pago R$: ${faixa3} <p>`
                }
 
                else {
                     if (3751 <= salario && salario <= 4664) {
-                    console.log("É descontado 22,5%")
+                    var faixa4  = (0.225 * salario) - 636.13
+                    faixa4 = faixa4.toFixed(2) 
+                    imposto.innerHTML = `<p> Com esse valor é descontado 22,5%, valor a ser pago R$: ${faixa4} <p>`
                     }
 
                     else {
                     console.log("É descontado 27,5%")
+                    var faixa5 = (0.275 * salario) - 869.36
+                    faixa5 = faixa5.toFixed(2)
+                    imposto.innerHTML = `<p> Com esse valor é descontado 27,5%, valor a ser pago R$: ${faixa5} <p>`
                     }
                  }
                }
