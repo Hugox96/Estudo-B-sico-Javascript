@@ -7,29 +7,34 @@
     <title>Tabuada de qualquer número</title>
 </head>
 <body>
-    <h1> Tabuada de qualquer número: </h1>
-    <input id="numero" type="number"> 
-    <button onclick="tabuada()">Exibir</button>
+    <h1>Tabuada de qualquer número: </h1>
+        <input id="numero" type="number"> 
+        <button onclick="tabuada()">Exibir</button>
+        <button onclick="limpar()">Limpar</button>
     <!--<button onclick="zerar()">Limpar</button> -->
     <p>Tabuada:</p>
+
     <section id="resultado" style='display:inline'>
         <p> O resultado aparecerá aqui </p>
     </section>
 
     <script>
         function tabuada(){
-    //transformao valor no input em um inteiro e depois atribui o valor na variavel num
+            //transforma o valor no input em um inteiro e depois atribui o valor na variavel num
             let num = parseInt(document.getElementById("numero").value);
-    // Pega o id resultado para ser mostrada na tela          
+            // Pega o id resultado para ser mostrada na tela          
             let resultado = document.getElementById("resultado");
             let tabuada = ""; // tabuada é vazia pois irá receber os resultados
 
             for( let i=1; i<=10; i++){
-                tabuada += num+ " vs " +i+ "=" +
+                tabuada += num+ " X " +i+ "=" + // A estrutura do código que aparece na tela
                  num*i+ "<br>"; // logica do calculo
-            resultado.innerHTML = tabuada; // pega o id resultado para mostrar na tela
+                 resultado.innerHTML = tabuada; // pega o id resultado para mostrar na tela
             }
         }
+
+        function limpar(){document.getElementById("numero").value = "";}
+
   </script>
      
 </body>

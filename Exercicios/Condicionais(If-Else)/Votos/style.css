@@ -56,8 +56,25 @@ body {
   
 }
 
-/* Vou melhorar depois */
+
 .btn {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: #a3b3d6;
+  color: black;
+  font-size: 16px;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  text-align: center;
+}
+
+
+.btn2 {
   position: absolute;
   top: 45%;
   left: 50%;
@@ -81,7 +98,7 @@ body {
 
 /*Editando o id idade para melhorar o design da resposta do usuário */
 #idade { 
-  color: rgb(97, 11, 11);
+  color: rgb(241, 239, 239);
   padding: 10px;
   margin-top: 40px;
   text-align: center;

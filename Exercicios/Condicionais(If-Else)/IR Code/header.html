@@ -55,9 +55,10 @@
 
                else {
                if (1903 <= salario && salario < 2826) {
-               var faixa2 = salario*3 
+               var faixa2 = (0.075 * salario) - 142.80
+               faixa2 = faixa2.toFixed(2)
                // console.log(`É descontado 7,5%, ${faixa1}`
-               imposto.innerHTML =  `<p> É descontado 7,5%, ${faixa1} <p>`
+               imposto.innerHTML =  `<p> É descontado 7,5%, valor a ser pago R$: ${faixa2} <p>`
                }
 
                else {
@@ -65,8 +66,8 @@
                     var faixa3 = (0.15 * salario) - 354.80
                     faixa3= faixa3.toFixed(2);
 
-                    // console.log(`É descontado 15%, ${faixa3}`)
-               imposto.innerHTML =  `<p> Com esse valor é descontado 15%, sendo o total: ${faixa3} <p>`
+               // console.log(`É descontado 15%, ${faixa3}`)
+               imposto.innerHTML =  `<p> Com esse valor é descontado 15%, valor a ser pago R$: ${faixa3} <p>`
                }
 
                else {
