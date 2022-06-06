@@ -17,10 +17,13 @@ while (Real <= Dolar)
 
 
 // Vamos criar uma contagem regressiva agora na virado do ano
-let segundos = 10
 
+//Declarando a variavel segundos
+let segundos = 10
+//Enquanto segundos for maior ou igual a 1, o laço será true
 while(segundos>=1){
     console.log(`${segundos}`)
+    //Quando segundos for igual ao valor 1, aparecerá está mensagem
     if(segundos == 1) {
     console.log("Feliz ano novo")
     }

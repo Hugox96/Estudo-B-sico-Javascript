@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+ <head>
+   <title>Curso JavaScript Progressivo</title>
+    <button onclick="pares()">Contar</button><br />
+
+   <script type="text/javascript">
+
+//O WHILE é um comando, uma estrutura de repetição, que em inglês significa 'enquanto'.
+//Basicamente ela funciona assim: enquanto uma condição for satisfeita, ela fica repetindo e repetindo um determinado trecho de código.
+//Através deste laço ou loop, conseguimos que um mesmo pedaço de código se repita quantas vezes desejarmos.
+
+// Ex1: Faça um script que printe na tela todos os números pares de 1 até 100.
+
+
+   function pares(){
+    var count = 1;
+
+    while (count<=100){
+      if (count % 2 == 0) {   
+     document.writeln(count+" é par <br />");
+      }
+      else {
+        document.writeln(count+" é impar <br />");  
+      }
+      count = count+1;     
+    }
+   }
+    </script>
+ </head>
+</html>
