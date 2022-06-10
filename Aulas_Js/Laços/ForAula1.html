@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+ <head>
+   <title>Curso JavaScript Progressivo</title>
+    <button onclick="pares_com_for()">Contar</button><br />
+
+   <script type="text/javascript">
+
+// O for é comando semelhante ao while, muito utilizado para realizar loops com listas, variaveis e outros tipos de dados.
+// A grande diferença em relação ao while é que temos que declarar um limite para o loop, diferente do while
+
+// Ex1: Faça um script que printe na tela todos os números pares de 1 até 15 com for.
+
+
+   function pares_com_for(){
+    
+
+    for (i = 0; i <=  15; i++){
+        if (i % 2 === 0) {   
+        document.writeln(i +" é par <br />");
+      }
+      else {
+        document.writeln(i+ " é impar <br />");  
+      }   
+    }
+   }
+    </script>
+ </head>
+</html>
