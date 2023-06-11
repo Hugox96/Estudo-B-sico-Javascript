@@ -33,6 +33,9 @@ nav{
     margin:  0 20px;   
 }
 
+#text .fa {
+    color:rgb(94, 9, 9)
+}
 .nav-links li .fa {
     color: rgb(4, 109, 247);
     font-size: 25px;
