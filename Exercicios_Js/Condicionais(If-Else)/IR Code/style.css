@@ -12,6 +12,10 @@
     background-color: rgba(245, 245, 245, 0.856);
     position: relative;
 }
+.testando{
+    background-color: rgb(204, 204, 228);
+    width: 150%;
+}
 
 nav{
     display: flex;
