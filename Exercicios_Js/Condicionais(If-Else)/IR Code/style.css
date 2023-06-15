@@ -37,8 +37,12 @@ nav{
     margin:  0 20px;   
 }
 
-#text .fa {
+* #text .fa {
     color:rgb(94, 9, 9)
+}
+
+#text .fa:hover{
+    color:rgb(4, 109, 247)
 }
 .nav-links li .fa {
     color: rgb(4, 109, 247);
@@ -48,8 +52,11 @@ nav{
     bottom: auto;
 }
 
+.nav-links li .fa:hover{
+    color:rgb(138, 34, 34);
+}
+
 .nav-links li a{
-    
     text-align: center;
     font-size: 20px;
     /* color: rgb(4, 109, 247); */
@@ -61,10 +68,6 @@ nav{
     border-radius: 50%; */
     /* background-color: rgb(228, 207, 207); */
     
-}
-
-.nav-links li .fa:hover{
-     color:black;
 }
 
 
