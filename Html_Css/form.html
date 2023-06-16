@@ -1,10 +1,39 @@
 <!-- An HTML form is used to collect user input. The user input is most often sent to a server for processing. -->
 
 <!-- Structure -->
-<!-- Temos um forma que irá abrangir todos os formularios, 
+<!-- Temos um form que irá abrangir todos os formularios, 
     em seguida definimos o tipo de dado que queremos que o usuário insira utilizando o input -->
+    
+    <!-- The HTML <input> element is the most used form element.
+
+    An <input> element can be displayed in many ways, depending on the type attribute.
+    
+    Here are some examples:
+        <input type="text">	    Displays a single-line text input field
+        <input type="radio">	Displays a radio button (for selecting one of many choices)
+        <input type="checkbox">	Displays a checkbox (for selecting zero or more of many choices)
+        <input type="submit">	Displays a submit button (for submitting the form)
+        <input type="button">	Displays a clickable button
+    --> 
+
+<!-- Exemplo Básico  -->
+<h1> Primeiro formulario </h1>
 <form>
-    <input type="text">
+    <input type="text" id="texto">
     <input type="email">
     <input type="checkbox">
+</form>
+
+<br>
+
+<!-- Agora podemos adicionar um label para ficar claro que tipo de informação queremos do usuário -->
+<!-- O atributo for da tag <label> deve ser igual ao  id atributo do input para edita-los juntos. -->
+<h1> Segundo formulário com Label </h1>
+<form>
+    <label for = "texto">Texto</label>
+    <input type="text" id="texto">
+    <label for = 'mail'> Email</label>
+    <input type="email" id="mail">
+    <label for="check"> Check</label>
+    <input type="checkbox" id="check">
 </form>
