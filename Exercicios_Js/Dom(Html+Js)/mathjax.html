@@ -4,8 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Exemplo MathJax com Input do Usuário</title>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.0/es5/tex-mml-chtml.min.js" integrity="sha512-wd1VphJkN0DeTV0jsTqP+ja2vouBr0+R7PmkNpWj7NDIOYJzHHnL/9YZTS1KJhoq/krNzInY9/8HmJU4p7ZbQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-</head>
+  <script id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
 <body>
   <div>
     <!-- Input do usuário -->
@@ -27,14 +28,28 @@
       const outputElement = document.getElementById('formulaOutput');
 
       // Insere o input do usuário dentro dos delimitadores de dólar (\$) para indicar uma fórmula matemática
-      const formulaText = '$' + input + '$'
+      const formulaText = '$' + input + '$';
 
       // Define o conteúdo do elemento com a fórmula matemática
       outputElement.innerHTML = formulaText;
 
       // Renderiza a fórmula usando MathJax
-      MathJax.typeset([outputElement]);
+      MathJax.typesetPromise([outputElement])
+        .catch((err) => console.log('Erro ao renderizar a fórmula:', err));
     }
   </script>
+
+   <!-- Configuration of math jax -->
+   <script>
+    MathJax = {
+        tex: {
+            inlineMath: [['$', '$'], 
+                        ['\\(', '\\)']]
+        },
+        svg: {
+            fontCache: 'global'
+        }
+    };
+</script>
 </body>
 </html>
