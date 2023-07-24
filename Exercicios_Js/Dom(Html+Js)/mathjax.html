@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exemplo MathJax com Input do Usuário</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.0/es5/tex-mml-chtml.min.js" integrity="sha512-wd1VphJkN0DeTV0jsTqP+ja2vouBr0+R7PmkNpWj7NDIOYJzHHnL/9YZTS1KJhoq/krNzInY9/8HmJU4p7ZbQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<body>
+  <div>
+    <!-- Input do usuário -->
+    <input type="text" id="formulaInput" placeholder="Digite a fórmula aqui">
+    <button onclick="renderFormula()">Renderizar Fórmula</button>
+  </div>
+
+  <div>
+    <!-- Espaço para renderizar a fórmula -->
+    <div id="formulaOutput"></div>
+  </div>
+
+  <script>
+    function renderFormula() {
+      // Obtém o input do usuário
+      const input = document.getElementById('formulaInput').value;
+
+      // Obtém o elemento onde a fórmula será renderizada
+      const outputElement = document.getElementById('formulaOutput');
+
+      // Insere o input do usuário dentro dos delimitadores de dólar (\$) para indicar uma fórmula matemática
+      const formulaText = '$' + input + '$'
+
+      // Define o conteúdo do elemento com a fórmula matemática
+      outputElement.innerHTML = formulaText;
+
+      // Renderiza a fórmula usando MathJax
+      MathJax.typeset([outputElement]);
+    }
+  </script>
+</body>
+</html>
