@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exemplo Flexbox</title>
+  <style>
+    /* Estilos para o container pai */
+    .container {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      height: 300px; /* Altura para fins de visualização */
+      max-width: 100vw;
+      border: 2px solid #ccc; /* Apenas para visualizar o container */
+    }
+
+    /* Estilos para os itens flexíveis */
+    .item {
+      width: 100px;
+      height: 100px;
+      background-color: #c71616;
+      margin: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="item">Item 1</div>
+    <div class="item">Item 2</div>
+    <div class="item">Item 3</div>
+  </div>
+</body>
+</html>

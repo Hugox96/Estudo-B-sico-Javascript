@@ -15,6 +15,7 @@
   </div>
 
   <div>
+    <br>
     <!-- Espaço para renderizar a fórmula -->
     <div id="formulaOutput"></div>
   </div>
@@ -27,29 +28,17 @@
       // Obtém o elemento onde a fórmula será renderizada
       const outputElement = document.getElementById('formulaOutput');
 
-      // Insere o input do usuário dentro dos delimitadores de dólar (\$) para indicar uma fórmula matemática
-      const formulaText = '$' + input + '$';
+      // // Insere o input do usuário dentro dos delimitadores de dólar (\$) para indicar uma fórmula matemática
+      // const formulaText = '$' + input + '$';
 
       // Define o conteúdo do elemento com a fórmula matemática
-      outputElement.innerHTML = formulaText;
+      outputElement.innerHTML = `$$${input}$$`;
 
       // Renderiza a fórmula usando MathJax
       MathJax.typesetPromise([outputElement])
         .catch((err) => console.log('Erro ao renderizar a fórmula:', err));
     }
   </script>
-
-   <!-- Configuration of math jax -->
-   <script>
-    MathJax = {
-        tex: {
-            inlineMath: [['$', '$'], 
-                        ['\\(', '\\)']]
-        },
-        svg: {
-            fontCache: 'global'
-        }
-    };
 </script>
 </body>
 </html>
