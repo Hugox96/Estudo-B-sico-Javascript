@@ -25,6 +25,9 @@
   <!-- Div para exibir o feedback da resposta do usuário -->
   <div id="feedbackResposta"></div>
 
+    <!-- Botão para verificar a resposta do usuário -->
+    <button onclick="verificarResposta()">Verificar Resposta</button>
+
   <script>
     function renderFormula() {
       // Obtém o input do usuário
@@ -39,11 +42,15 @@
       // Renderiza a fórmula usando MathJax
       MathJax.typesetPromise([outputElement])
         .catch((err) => console.log('Erro ao renderizar a fórmula:', err));
+
+      //Limpar o feedback da resposta anterior ao renderizar nova fórmula
+     document.getElementById('feedbackResposta').innerHTML = '';  
     }
 
     // Função para avaliar a resposta do usuário
     function verificarResposta() {
       const respostaUsuario = document.getElementById('formulaInput').value;
+      console.log(respostaUsuario)
       const respostaCorreta = '4x';
 
       if (respostaUsuario === respostaCorreta) {
