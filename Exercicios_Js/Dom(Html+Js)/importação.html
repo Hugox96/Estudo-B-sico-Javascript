@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Calculadora de Impostos de Importação</title>
+</head>
+<body>
+    <h1>Calculadora de Impostos de Importação</h1>
+    <label for="valor">Valor do produto (em dólares):</label>
+    <input type="number" id="valor" step="0.01">
+    <button onclick="calcularImpostos()">Calcular</button>
+    <p>Valor total estimado (em reais): <span id="valorTotal"></span></p>
+
+    <script>
+        function calcularImpostos() {
+            const valorProduto = parseFloat(document.getElementById("valor").value);
+            const dolarParaReal = 4.79; // Valor aproximado da cotação dólar/real (apenas um exemplo)
+
+            if (isNaN(valorProduto) || valorProduto <= 0) {
+                alert("Por favor, insira um valor válido.");
+                return;
+            }
+
+            let descricao;
+            let valorTotalEmReais;
+            if (valorProduto <= 50) {
+                // Compras de até US$ 50 têm apenas incidência de ICMS (17%)
+                descricao = "Compras de até US$ 50 têm isenção de imposto de importação e incidência de ICMS (17%).";
+                valorTotalEmReais = valorProduto * dolarParaReal * 1.17;
+            } else {
+                // Compras acima de US$ 50 têm incidência de ICMS (17%) e imposto de importação (60%)
+                descricao = "Compras acima de US$ 50 têm incidência de ICMS (17%) e imposto de importação (60%).";
+                valorTotalEmReais = valorProduto * dolarParaReal * 1.17 * 1.60;
+            }
+
+            document.getElementById("valorTotal").textContent = valorTotalEmReais.toFixed(2);
+            alert(descricao + "\n\nValor total estimado em reais: R$ " + valorTotalEmReais.toFixed(2));
+        }
+    </script>
+</body>
+</html>
