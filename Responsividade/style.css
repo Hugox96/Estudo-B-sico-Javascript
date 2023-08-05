@@ -5,9 +5,14 @@
 }
 
 /* Estilo para dispositivos menores que 768px */
-@media (max-width: 767px) {
+@media (max-width: 450px) {
     .box {
         background-color: red;
         color: black;
+    }
+
+    h1{
+        color:brown;
+        margin-left: 40%;
     }
 }

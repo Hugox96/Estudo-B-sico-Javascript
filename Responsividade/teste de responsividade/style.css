@@ -172,9 +172,10 @@ section.images .circle {
 }
 
 /* Quando reduzimos a tela para menor 450px os as classes são modificadas */
-@media (max-width: 450px) {
+@media (width < 450px) {
     main h1 { 
         font-size: 2rem;
+        color:#1d66ec;
     }
 
     main .alternative span {
