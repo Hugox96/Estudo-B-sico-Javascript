@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Limites no Cálculo</title>
+</head>
+<body>
+    <header class="header">
+        <h1>Entendendo os Limites no Cálculo</h1>
+    </header>
+    <div class="content">
+        <p>Nesta página, vamos explicar como funcionam os limites no cálculo.</p>
+        <!-- ... (conteúdo anterior) ... -->
+        
+        <h2>Exercício</h2>
+        <p>Calcule o limite da função <math>
+            <mi>g</mi>
+            <mo>(</mo>
+            <mi>x</mi>
+            <mo>)</mo>
+            <mo>=</mo>
+            <msup>
+                <mi>x</mi>
+                <mn>3</mn>
+            </msup>
+        </math> quando <math>
+            <mi>x</mi>
+        </math> se aproxima de 3:</p>
+        
+        <form>
+            <label for="userAnswer">Resposta:</label>
+            <input type="text" id="userAnswer" name="userAnswer">
+            <button type="button" id="checkButton">Verificar</button>
+        </form>
+        <p id="feedback"></p>
+
+        <a href="index.html">Voltar para a página inicial</a>
+    </div>
+
+    <script>
+        const checkButton = document.getElementById('checkButton');
+        const userAnswer = document.getElementById('userAnswer');
+        const feedback = document.getElementById('feedback');
+
+        checkButton.addEventListener('click', () => {
+            const answer = userAnswer.value.trim();
+            if (answer === '27') {
+                feedback.textContent = 'Correto! O limite é 27.';
+            } else {
+                feedback.textContent = 'Incorreto. Tente novamente.';
+            }
+        });
+    </script>
+</body>
+</html>
