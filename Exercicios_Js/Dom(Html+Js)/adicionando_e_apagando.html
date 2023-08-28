@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lista de Tarefas</title>
+    <style>
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            padding: 10px;
+            border-bottom: 1px solid #6b1c1c;
+        }
+    </style>
+</head>
+<body>
+    <h1>Lista de Tarefas</h1>
+    <input type="text" id="newTask" placeholder="Nova tarefa">
+    <button onclick="addTask()">Adicionar</button>
+    <button onclick="removeTask()">remover</button>
+    <ul id="taskList">
+        <!-- Lista de tarefas será adicionada aqui -->
+    </ul>
+
+    <script>
+        function addTask() {
+            var taskInput = document.getElementById("newTask");
+            var taskText = taskInput.value;
+            if (taskText.trim() !== "") {
+                var taskList = document.getElementById("taskList");
+                var newTask = document.createElement("li");
+                newTask.textContent = taskText;
+                taskList.appendChild(newTask);
+                taskInput.value = "";
+            }
+        }
+
+        function removeTask() {
+            var ToremoveTask = document.getElementById("taskList");
+            ToremoveTask.remove();
+        }
+    </script>
+</body>
+</html>
