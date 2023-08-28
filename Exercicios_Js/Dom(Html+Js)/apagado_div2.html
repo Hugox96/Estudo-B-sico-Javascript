@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Exemplo de Remoção de Div</title>
+    <style>
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color: lightblue;
+            border: 2px solid blue;
+            text-align: center;
+            line-height: 200px;
+            font-size: 18px;
+        }
+
+        .clear-button {
+            margin-bottom: 5px;
+            cursor: pointer;
+            padding: 10px 20px;
+            background-color: red;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box" id="myBox">Essa é uma div</div>
+    </div>
+    <button class="clear-button" id="clearButton">Limpar Div</button>
+
+    <script>
+        const clearButton = document.getElementById('clearButton');
+        const myBox = document.getElementById('myBox');
+
+        clearButton.addEventListener('click', () => {
+            myBox.remove();
+        });
+    </script>
+</body>
+</html>
