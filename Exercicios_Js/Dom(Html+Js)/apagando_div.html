@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Exemplo de Remoção de Div</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 100px;
+            background-color: lightblue;
+            margin: 20px;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box" id="divToBeRemoved">
+        Esta é a div que pode ser removida.
+    </div>
+    <button onclick="removeDiv()">Clear</button>
+
+    <script>
+        function removeDiv() {
+            var divToRemove = document.getElementById("divToBeRemoved");
+            divToRemove.remove();
+        }
+    </script>
+</body>
+</html>
