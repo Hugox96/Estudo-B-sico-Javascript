@@ -11,8 +11,8 @@ document.addEventListener('DOMContentLoaded', function() {
          // Tente calcular a integral
          try {
             console.log("estou no try")
-            const nerdamer = require('nerdamer/all');
-            var integral = nerdamer.solverEquations(expression, 'x');
+            const nerdamer = require('nerdamer');
+            var integral = nerdamer.integrate(expression, 'x');
             console.log(integral.toString())
 
             // Exiba o resultado como uma string
