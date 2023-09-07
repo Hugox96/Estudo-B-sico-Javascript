@@ -1,7 +1,7 @@
 
 // Defina a expressão que você deseja integrar
 const expressao = '1/x';
-const exp = "2x"
+const exp = "3x"
 
 // Realize a integração
 const nerdamer = require('./nerdamer/all');
