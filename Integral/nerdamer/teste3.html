@@ -16,10 +16,11 @@
     <script>
         // Função para calcular a integral
         function calcularIntegral() {
-            const expression = 'x'; // Expressão que você deseja calcular
+            const expression = '2x'; // Expressão que você deseja calcular
             const resultDiv = document.getElementById('result');
 
             try {
+                const nerdamer = require('/.nerdamer/all');
                 const integral = nerdamer.integrate(expression, 'x');
 
                 // Exiba o resultado como uma string
