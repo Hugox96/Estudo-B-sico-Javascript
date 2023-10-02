@@ -38,3 +38,14 @@ footer{
     grid-template-columns: repeat(4, 1fr);
     padding: 3rem 3.5rem;
 }
+
+#div-contatos h1{
+    margin-bottom: 0.75rem;
+}
+
+#icones-socais{
+    display: flex;
+    /* da espaçamento entre os elementos */
+    gap: 2rem;
+    margin-top: 1.5rem;
+}
