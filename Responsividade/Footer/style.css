@@ -29,9 +29,12 @@ footer{
     text-decoration: none;
 }
 
+/* Aqui modificamos o conteudo do div para criamos o footer */
 #div-conteudo {
     background-color: var(--color-neutral-10);
+    /* display grid para estilziarmos o conteudo */
     display: grid;
+    /* Aqui criamos 4 colunas com espaço de 1fr entre elas */
     grid-template-columns: repeat(4, 1fr);
     padding: 3rem 3.5rem;
 }
