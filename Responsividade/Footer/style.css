@@ -80,3 +80,21 @@ footer{
 #spotify {
     background-color: #25d366;
 }
+
+
+.links-ul {
+    /* utilziando o flexbox para editar os links */
+    display: flex;
+    /* direção da coluna no flex */
+    flex-direction: column;
+    /* espaçamento da coluna */
+    gap: 1rem;
+    list-style: none;
+}
+
+.links-ul {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    list-style: none;
+}
