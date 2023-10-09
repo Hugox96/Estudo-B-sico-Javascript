@@ -92,9 +92,9 @@ footer{
     list-style: none;
 }
 
-.links-ul {
+/* .links-ul {
     display: grid;
     grid-template-columns: 1fr;
     gap: 1rem;
     list-style: none;
-}
+} */
