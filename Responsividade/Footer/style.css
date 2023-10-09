@@ -110,15 +110,58 @@ footer{
     transition: all 0.8s;
 }
 
-#enviar-email {
+/* #enviar-email {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
 }
+ */
 
-
+ /* utilizando grid */
 #enviar-email {
     display: grid;
     grid-template-columns: 1fr;
     gap: 1.5rem;
+}
+
+#enviar-email p {
+    color: var(--color-neutral-30);
+}
+
+#contato {
+    display: flex;
+    align-items: center;
+    background-color: var(--color-neutral-0);
+    border-radius: 4px;
+}
+
+#contato input {
+    all: unset;
+    padding: 0.75rem;
+    width: 100%;
+}
+
+#contato button {
+    background-color: #7f37c9;
+    border: none;
+    color: var(--color-neutral-40);
+    padding: 0px 1.25rem;
+    font-size: 1.125rem;
+    height: 100%;
+    border-radius: 0px 4px 4px 0px;
+    cursor: pointer;
+    transition: all 0.4s;
+}
+
+#contato button:hover {
+    opacity: 0.8;
+}
+
+#footer_copyright {
+    display: flex;
+    justify-content: center;
+    background-color: var(--color-neutral-0);
+    font-size: 0.9rem;
+    padding: 1.5rem;
+    font-weight: 100;
 }
