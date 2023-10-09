@@ -109,3 +109,16 @@ footer{
     color: pink;
     transition: all 0.8s;
 }
+
+#enviar-email {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+
+#enviar-email {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
