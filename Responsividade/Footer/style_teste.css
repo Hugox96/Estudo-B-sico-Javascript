@@ -60,10 +60,10 @@ footer{
     list-style: none;
 } */
 
-.links-ul .footer-link {
+/* .links-ul .footer-link {
     color: var(--color-neutral-30);
     transition: all 0.8s;
-}
+} */
 
 .links-ul .footer-link:hover {
     color: pink;
@@ -81,41 +81,13 @@ footer{
 #enviar-email {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 1.5rem;
+    /* gap: 1.5rem; */
 }
 
-#enviar-email p {
+/* #enviar-email p {
     color: var(--color-neutral-30);
-}
+} */
 
-#contato {
-    display: flex;
-    align-items: center;
-    background-color: var(--color-neutral-0);
-    border-radius: 4px;
-}
-
-#contato input {
-    all: unset;
-    padding: 0.75rem;
-    width: 100%;
-}
-
-#contato button {
-    background-color: #7f37c9;
-    border: none;
-    color: var(--color-neutral-40);
-    padding: 0px 1.25rem;
-    font-size: 1.125rem;
-    height: 100%;
-    border-radius: 0px 4px 4px 0px;
-    cursor: pointer;
-    transition: all 0.4s;
-}
-
-#contato button:hover {
-    opacity: 0.8;
-}
 
 #footer_copyright {
     display: flex;
