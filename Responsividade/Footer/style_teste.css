@@ -28,6 +28,16 @@ footer{
     text-decoration: none;
 }
 
+h1{
+    align-items: center;
+    text-align: center;
+}
+
+h1:hover {
+    color: pink;
+    transition: all 0.8s;
+}
+
 /* Aqui modificamos o conteudo do div para criamos o footer */
 #div-conteudo {
     background-color: var(--color-neutral-0);
