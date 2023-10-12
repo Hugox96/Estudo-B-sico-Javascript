@@ -34,7 +34,7 @@ h1{
 }
 
 h1:hover {
-    color: pink;
+    color:var(--color-neutral-10);
     transition: all 0.8s;
 }
 
@@ -61,7 +61,6 @@ h1:hover {
 }
 
 
-
 .links-ul {
     /* utilziando o flexbox para editar os links */
     display: flex;
@@ -77,13 +76,12 @@ h1:hover {
     transition: all 0.8s;
 }
 
- 
 
-#footer_copyright {
+#copyright {
     display: flex;
     justify-content: center;
-    background-color: var(--color-neutral-0);
+    background-color: var(--color-neutral-10);
     font-size: 0.9rem;
-    padding: 1.5rem;
+    padding: 0.5rem;
     font-weight: 100;
 }
