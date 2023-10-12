@@ -49,7 +49,7 @@ h1:hover {
 }
 
 #Quem-Somos{
-    margin-right: 0.75rem;
+    margin-left: 1rem;
 }
 
 #Projetos{
@@ -84,4 +84,19 @@ h1:hover {
     font-size: 0.9rem;
     padding: 0.5rem;
     font-weight: 100;
+}
+
+@media screen and (max-width: 768px) {
+    #div-conteudo {
+        grid-template-columns: repeat(1, 1fr);
+        /* gap: 0.5rem; */
+        padding: 2rem, 2rem;
+    }
+
+    p{
+        color:aqua;
+        display: flex;
+        justify-content: center;
+        font-size: medium;
+    }
 }
