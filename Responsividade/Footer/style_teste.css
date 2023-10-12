@@ -62,42 +62,12 @@ h1:hover {
     list-style: none;
 }
 
-/* mesmo resultado com grid */
-/* .links-ul {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 1rem;
-    list-style: none;
-} */
-
-/* .links-ul .footer-link {
-    color: var(--color-neutral-30);
-    transition: all 0.8s;
-} */
-
 .links-ul .footer-link:hover {
     color: pink;
     transition: all 0.8s;
 }
 
-/* #enviar-email {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-}
- */
-
- /* utilizando grid */
-#enviar-email {
-    display: grid;
-    grid-template-columns: 1fr;
-    /* gap: 1.5rem; */
-}
-
-/* #enviar-email p {
-    color: var(--color-neutral-30);
-} */
-
+ 
 
 #footer_copyright {
     display: flex;
