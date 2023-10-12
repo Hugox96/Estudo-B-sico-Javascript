@@ -45,12 +45,22 @@ h1:hover {
     display: grid;
     /* Aqui criamos 4 colunas com espaço de 1fr entre elas */
     grid-template-columns: repeat(3, 1fr);
-    padding: 2rem 3.5rem;
+    padding: 2rem 2rem;
 }
 
-#div-contatos h1{
-    margin-bottom: 0.75rem;
+#Quem-Somos{
+    margin-right: 0.75rem;
 }
+
+#Projetos{
+    margin-left: 1rem;
+}
+
+#Contribuiçao{
+    margin-left: 1rem;
+}
+
+
 
 .links-ul {
     /* utilziando o flexbox para editar os links */
