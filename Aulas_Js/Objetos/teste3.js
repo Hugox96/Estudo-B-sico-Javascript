@@ -30,5 +30,5 @@ function calcularDerivada(funcao) {
   });
 }
 
-let funcao = '2x + 2x';
+let funcao = 'sin(x)';
 calcularDerivada(funcao);
