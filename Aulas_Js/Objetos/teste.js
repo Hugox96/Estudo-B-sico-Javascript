@@ -7,8 +7,7 @@
 // frequentemente usada para representar dados estruturados.
 
 
-
-const math = require('mathjs');
+const nerdamer = require('./nerdamer/all');
 
 function calcularDerivada(funcao) {
   let passos = [];
@@ -17,7 +16,7 @@ function calcularDerivada(funcao) {
   passos.push({ descricao: 'Passo 1: Identifique a função:', equacao: `f(x) = ${funcao}` });
 
   // Passo 2: Calcular a derivada
-  let derivada = math.derivative(funcao, 'x').toString();
+  let derivada = nerdame.diff(funcao, 'x').toString();
   passos.push({ descricao: 'Passo 2: Calcular a derivada:', equacao: `f'(x) = ${derivada}` });
 
   return passos;
