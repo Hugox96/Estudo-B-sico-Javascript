@@ -6,8 +6,8 @@
 // descricao e equacao. Essa estrutura é bastante flexível e é 
 // frequentemente usada para representar dados estruturados.
 
-
-const nerdamer = require('./nerdamer/all');
+// Funcinou
+const math = require('mathjs');
 
 function calcularDerivada(funcao) {
   let passos = [];
@@ -16,7 +16,7 @@ function calcularDerivada(funcao) {
   passos.push({ descricao: 'Passo 1: Identifique a função:', equacao: `f(x) = ${funcao}` });
 
   // Passo 2: Calcular a derivada
-  let derivada = nerdame.diff(funcao, 'x').toString();
+  let derivada = math.derivative(funcao, 'x').toString();
   passos.push({ descricao: 'Passo 2: Calcular a derivada:', equacao: `f'(x) = ${derivada}` });
 
   return passos;
