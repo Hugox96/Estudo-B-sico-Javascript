@@ -11,7 +11,7 @@ class Lancamento
     }
 }
 
-class ClicloFinanceiro
+class CicloFinanceiro
 {
     constructor(mes, ano)
     {
@@ -22,20 +22,23 @@ class ClicloFinanceiro
  
     addLancamentos(...lancamentos) {
         lancamentos.forEach(l => this.lancamentos.push(l))
+        // console.log(typeof(lancamentos))
     }
 
     sumario() {
         let valorConsolidado = 0
+        let nome = ""
         this.lancamentos.forEach(l => {
             valorConsolidado += l.valor
+            nome += l.nome
         })
-        return valorConsolidado
+        return [nome, valorConsolidado]
     }
 }
 
-const salario = new Lancamento("Salario", 4500)
-const contaDeLuz = new Lancamento("Luz", -500)
-const contaDeInternet = new Lancamento("Internet", 170)
+const salario = new Lancamento("Salario e ", 4500)
+const contaDeLuz = new Lancamento("Luz e ", -500)
+const contaDeInternet = new Lancamento("Internet ", 170)
 
 const contas = new CicloFinanceiro(7, 2018)
 contas.addLancamentos(salario, contaDeLuz, contaDeInternet)
