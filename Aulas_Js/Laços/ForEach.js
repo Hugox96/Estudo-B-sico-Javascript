@@ -2,7 +2,7 @@
 // numeros.forEach(num  => console.log(num * 2))
 let piece = [1, 2, 3];
 let _ = ['Team A'];
-let i = 0;
+
 
 piece.forEach(el => _.push(el));  // Adiciona o valor de `i` ao array `_`
 
