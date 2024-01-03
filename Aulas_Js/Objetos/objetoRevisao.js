@@ -1,6 +1,6 @@
 const produto = new Object
 produto.nome = "Cadeira"
-produto["marca do produto"] = "Generica"
+produto.marca = "Generica"
 produto.preco = 220
 console.log(produto)
 
@@ -35,10 +35,11 @@ const carro = {
            
     calcularValorSeguro: function()
     {
-         
+         return carro.valor * 3
     }
 }
 
 carro.proprietario.endereco.numero = 1000
 carro['proprietario']['endereco']['logradouro'] = 'Av Gigante'
+// calcularValorSeguro()
 // console.log(carro)
