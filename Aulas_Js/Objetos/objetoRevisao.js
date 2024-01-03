@@ -6,7 +6,6 @@ console.log(produto)
 
 // Podemos deletar alguns atributos com o delete
 delete produto.preco
-delete produto["marca do produto"]
 
 // console.log(produto)
 
@@ -35,11 +34,13 @@ const carro = {
            
     calcularValorSeguro: function()
     {
-         return carro.valor * 3
+         return this.valor * 3
     }
 }
 
 carro.proprietario.endereco.numero = 1000
 carro['proprietario']['endereco']['logradouro'] = 'Av Gigante'
-// calcularValorSeguro()
+// Invocar a função calcularValorSeguro
+const valorSeguro = carro.calcularValorSeguro();
+console.log(valorSeguro);
 // console.log(carro)
