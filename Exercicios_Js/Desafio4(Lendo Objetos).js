@@ -17,12 +17,15 @@ const livro = {
     genero: 'Ficção'
   };
   
+  //Neste exemplo ele percorre cada chave e transformar os textos em maiuscula
   Object.keys(livro).forEach(chave => {
     livro[chave] = livro[chave].toUpperCase();
   });
   
   console.log(livro);
   
+//************************************************************************* 3º exercicio ***********************************************************//
+
 
   const carro = {
     marca: 'Toyota',
@@ -31,8 +34,10 @@ const livro = {
     quilometragem: 50000
   };
   
+  //aqui ele cria uma lista vazia que será adicionada dps dentro do for
   const propriedadesNumericas = [];
   Object.entries(carro).forEach(([chave, valor]) => {
+    // dentro do forEach ele avalia o tipo de cada propriedade e caso se for numero, realiza um push
     if (typeof valor === 'number') {
       propriedadesNumericas.push(chave);
     }
