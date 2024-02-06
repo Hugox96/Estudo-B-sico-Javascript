@@ -37,10 +37,14 @@ const carro = {
          return this.valor * 3
     }
 }
-
+// Podemos chamar as propriedades assim:
 carro.proprietario.endereco.numero = 1000
+console.log(carro.proprietario.endereco.numero)
+// Ou assim: 
 carro['proprietario']['endereco']['logradouro'] = 'Av Gigante'
+
 // Invocar a função calcularValorSeguro
 const valorSeguro = carro.calcularValorSeguro();
 console.log(valorSeguro);
+
 // console.log(carro)
