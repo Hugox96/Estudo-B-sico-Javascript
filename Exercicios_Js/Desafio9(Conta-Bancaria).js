@@ -16,3 +16,15 @@ sacar(valor){
     else {console.log(`Saldo insuficiente para realizar o saque de ${valor}. Saldo atual: ${this.saldo}`);
 }}} 
 
+const salario = new ContaBancaria(2000)
+console.log(salario)
+
+// depositando
+salario.depositar(100)
+
+for (let i = 0; i <= 5; i++){
+    salario.depositar(i)
+}
+
+
+
