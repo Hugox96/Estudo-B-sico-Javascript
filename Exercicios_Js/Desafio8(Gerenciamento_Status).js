@@ -14,7 +14,7 @@ const carro = {
             this.velAtual = this.velMax;
         }
     },
-
+    // aqui a logica é quase a mesma, porém caso turbo seja true, incrementa 20 a velocidade max, caso false não muda nada
     acelerarComTurbo(delta) {
         if (this.velAtual + delta <= this.velMax + (this.turbo ? 20 : 0)) {
             this.velAtual += delta;
@@ -23,10 +23,11 @@ const carro = {
         }
     },
 
+    // aciona o turbo 
     ativarTurbo() {
         this.turbo = true;
     },
-
+    //desativa o turbo
     desativarTurbo() {
         this.turbo = false;
     },
