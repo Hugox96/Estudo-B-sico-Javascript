@@ -21,4 +21,7 @@ class Animal {
   
   const dog = new Dog('Rex', 'Labrador');
   dog.speak();
+
+  const animal = new Animal("hugo")
+  animal.speak()
   
