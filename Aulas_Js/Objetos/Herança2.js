@@ -10,12 +10,13 @@ const carro = {
     velMax: 200,
     acelerarMais(delta)
     {
-        if (this.velAtual + delta <=  this.velMax)
+        if (this.velAtual + delta >= this.velMax)
         {
             this.velAtual += delta
         }
         else{
             this.velAtual = this.velMax
+            // this.velMax = this.velAtual
         }
     },
     status()
@@ -41,11 +42,11 @@ const volvo = {
 Object.setPrototypeOf(ferrari, carro)
 Object.setPrototypeOf(volvo, carro)
 
-console.log(ferrari)
-console.log(volvo)
+// console.log(ferrari)
+// console.log(volvo)
 
-volvo.acelerarMais(100)
-console.log(volvo.status())
+// volvo.acelerarMais(100)
+// console.log(volvo.status())
 
 ferrari.acelerarMais(300)
-console.log(ferrari.status())
+console.log("ferrari",ferrari.status())
