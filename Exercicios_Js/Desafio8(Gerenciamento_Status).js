@@ -1,11 +1,15 @@
+// criando o objeto carro
 const carro = {
     velAtual: 0,
     velMax: 200,
     turbo: false, // Novo atributo para controlar o turbo
 
+    // essa metodo é responsável para definir a velocidade, garantindo que não ultrapasse a velocidade maxima
     acelerarMais(delta) {
+        // Se a velocidade for menor ou igual a delta, velocidade atual recebe delta
         if (this.velAtual + delta <= this.velMax) {
             this.velAtual += delta;
+        // Caso não seja, velocidade atual recebe velocidade max, nesse caso 200    
         } else {
             this.velAtual = this.velMax;
         }
