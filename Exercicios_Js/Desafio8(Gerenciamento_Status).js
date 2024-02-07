@@ -33,5 +33,7 @@ const carro = {
 };
 
 // Exemplo de uso:
+carro.ativarTurbo()
+carro.desativarTurbo()
 carro.acelerarComTurbo(50);
 console.log(carro.status()); // Exibe a velocidade atual, a velocidade máxima com o turbo e se o turbo está ativado
