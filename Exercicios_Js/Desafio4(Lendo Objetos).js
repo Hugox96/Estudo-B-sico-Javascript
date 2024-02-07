@@ -1,13 +1,13 @@
-// const personagem ={
-//     nome: "Naruto",
-//     poder: "Rasengam",
-//     cargo: "Hokage"
-// };
+const personagem ={
+    nome: "Naruto",
+    poder: "Rasengam",
+    cargo: "Hokage"
+};
 
-// Object.entries(personagem).forEach(([chave, valor]) => {
-//     console.log(`${chave}: ${valor}`);
+Object.entries(personagem).forEach(([chave, valor]) => {
+    console.log(`${chave}: ${valor}`);
 
-// });
+});
 
 
 //************************************************************************* 2º exercicio ***********************************************************//
