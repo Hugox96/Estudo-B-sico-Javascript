@@ -1,8 +1,10 @@
+// Class principal ContaBancaria com a nossa variavel principal saldoInicial
 class ContaBancaria {
     constructor(saldoInicial) {
       this.saldo = saldoInicial;
     }
   
+    // metodo para realizar o deposito, nesse caso o valor é incrementado
     depositar(valor) {
       this.saldo += valor;
       console.log(`Depósito de ${valor} realizado com sucesso. Novo saldo: ${this.saldo}`);
