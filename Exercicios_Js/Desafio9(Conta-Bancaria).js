@@ -14,7 +14,6 @@ class ContaBancaria {
     sacar(valor, msg) {
       if (valor <= this.saldo) {
         this.saldo -= valor;
-        msg = "saquei para comprar manga"
         console.log(`Saque de ${valor} realizado com sucesso: ${msg}`);
         console.log(`Novo saldo: ${this.saldo}`)
       } else {
@@ -39,5 +38,5 @@ const destino = new ContaBancaria(1); // Criando uma conta de destino
 
 // //depositando
 salario.depositar(10);
-salario.sacar(20)
+salario.sacar(20, "comprei manga")
 // salario.transferir(destino, 20); // Passando a conta de destino como argumento
