@@ -3,6 +3,7 @@ class ContaBancaria {
     constructor(saldoInicial) {
       // saldo é a variavel mais importante, a partir dela que vamos fazer a operação
       this.saldo = saldoInicial;
+      console.log(`esse é o saldo atual : ${this.saldo}`)
     }
   
     // metodo para realizar o deposito, nesse caso o valor é incrementado
@@ -33,10 +34,12 @@ class ContaBancaria {
 }
 
 // instanciando a classe contabancaria
-const salario = new ContaBancaria(3000);
-const destino = new ContaBancaria(1); // Criando uma conta de destino
+const salario = new ContaBancaria(105);
+// const destino = new ContaBancaria(); // Criando uma conta de destino
 
 // //depositando
-salario.depositar(10);
-salario.sacar(20, "comprei manga")
+salario.depositar(706);
+salario.sacar(213)
+salario.sacar(180)
+// salario.sacar(20, "comprei manga")
 // salario.transferir(destino, 20); // Passando a conta de destino como argumento
