@@ -16,6 +16,18 @@ receberDano(dano) {
 
     if(this.vida <= 30) {
         // irei criar daqui a pouco
-        this.UserBuster()
+        this.UserBuster();
     }
+
+    if(this.vida == 0) {
+        console.log("O personagem foi de F");
+    }
+
+
+userBurst() {
+    console.log(`${this.nome} usou Burst e recuperou 50 pontos de vida.`);
+    this.vida += 50;
+    console.log(`${this.nome} agora tem ${this.vida} pontos de vida.`);
+}
+
 }
