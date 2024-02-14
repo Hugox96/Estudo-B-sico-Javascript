@@ -36,3 +36,6 @@ const jogador2 = new Personagem('Mago', 80);
 
 jogador1.receberDano(30)
 jogador1.receberDano(40)
+jogador1.receberDano(60)
+jogador1.receberDano(70)
+jogador1.receberDano(70)
