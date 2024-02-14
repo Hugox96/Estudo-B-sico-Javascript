@@ -1,3 +1,7 @@
+
+// classe principal com os atributos dos personagens
 class personagem {
-    contruct()
+    constructor(nome, vida){
+    this.nome = nome;
+    this.vida = vida;}
 }
