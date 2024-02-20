@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Derivada</title>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/10.4.0/math.min.js"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+    <input type="text" id="userInput" placeholder="Digite a função">
+    <button onclick="calcularDerivada()">Calcular</button>
+    <div id="resultadoDiv"> Testando div </div>
+
+    <script>
+    function calcularDerivada() {
+        // Recupere a entrada do usuário
+        var userInput = document.getElementById('userInput').value;
+        var resultadoDiv = document.getElementById('resultadoDiv');
+
+        // Adicione espaços em torno dos operadores '+' e '-'
+        userInput = userInput.replace(/\+/g, ' + ').replace(/\-/g, ' - ');
+
+        // Divida a função em termos
+        let termos = userInput.split(' ');
+
+        // Calcule a derivada de cada termo
+        let passos = [];
+        for (let i = 0; i < termos.length; i++) {
+            let termo = termos[i];
+
+            // Ignore non-term strings
+            if (termo.trim() === '' || termo.trim() === '+' || termo.trim() === '-') {
+                continue;
+            }
+
+            try {
+                // Calcula a derivada do termo usando math.js
+                let derivada = math.derivative(termo, 'x').toString();
+
+                passos.push({descricao: `Passo ${i+2}: A derivada de ${termo} é:`, equacao: `f'(x) = ${derivada}` });
+            } catch (error) {
+                console.error(`Error calculating derivative of ${termo}: ${error}`);
+            }
+        }
+
+        // Formate a derivada como uma expressão LaTeX
+        var latexDerivada = `$$f'(x) = ${passos.map(passo => passo.equacao).join(' ')}$$`;
+
+        // Insira a expressão LaTeX na div de resultado
+        resultadoDiv.innerHTML = latexDerivada;
+        MathJax.typesetPromise([resultadoDiv])
+            .catch(function (err) {
+                console.log('Erro ao renderizar a fórmula:', err);
+        });
+    }
+    </script>
+</body>
+</html>
