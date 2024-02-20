@@ -33,6 +33,7 @@
         let passos = [];
         for (let i = 0; i < termos.length; i++) {
             let termo = termos[i];
+            console.log(termo)
 
             // Ignore non-term strings
             if (termo.trim() === '' || termo.trim() === '+' || termo.trim() === '-') {
@@ -42,6 +43,7 @@
             try {
                 // Converte o termo para uma expressão válida do nerdamer
                 let expr = nerdamer(termo);
+                console.log(expr)
                 // Calcula a derivada do termo
                 let derivada = nerdamer.diff(expr, 'x').toString();
                 console.log(derivada)
