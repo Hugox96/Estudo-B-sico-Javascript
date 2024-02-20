@@ -27,6 +27,7 @@
 
         // Divida a função em termos
         let termos = userInput.split(' ');
+        console.log(termos)
 
         // Calcule a derivada de cada termo
         let passos = [];
@@ -43,8 +44,10 @@
                 let expr = nerdamer(termo);
                 // Calcula a derivada do termo
                 let derivada = nerdamer.diff(expr, 'x').toString();
+                console.log(derivada)
 
                 passos.push({descricao: `Passo ${i+2}: A derivada de ${termo} é:`, equacao: `f'(x) = ${derivada}` });
+                console.log(passos)
             } catch (error) {
                 console.error(`Error calculating derivative of ${termo}: ${error}`);
             }
