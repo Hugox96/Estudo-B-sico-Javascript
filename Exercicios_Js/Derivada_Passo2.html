@@ -20,6 +20,9 @@
         var userInput = document.getElementById('userInput').value;
         var resultadoDiv = document.getElementById('resultadoDiv');
 
+        // Clear the resultadoDiv
+        resultadoDiv.innerHTML = '';
+
         // Adicione espaços em torno dos operadores '+' e '-'
         userInput = userInput.replace(/\+/g, ' + ').replace(/\-/g, ' - ');
 
@@ -46,15 +49,35 @@
             }
         }
 
-        // Formate a derivada como uma expressão LaTeX
+        // Criando um passo a passo na tela:
+        
+        // Iterate over each passo and append it to the resultadoDiv
+        passos.forEach(passo => {
+        // Create a new div for this passo
+        let passoDiv = document.createElement('div');
+
+        // Set the text of the passoDiv to the descricao and equacao of the passo
+        passoDiv.textContent = `${passo.descricao} ${passo.equacao}`;
+
+        // Append the passoDiv to the resultadoDiv
+        resultadoDiv.appendChild(passoDiv);
+    });
+
+
+
+        // // Formate a derivada como uma expressão LaTeX
         // var latexDerivada = `$$f'(x) = ${passos.map(passo => passo.equacao).join(' ')}$$`;
 
-        // Tentando pegar diretamente ele dá undefined
-        var latexDerivada = `$$f'(x) = ${passos.equacao}$$`;
 
-        // Insira a expressão LaTeX na div de resultado
-        resultadoDiv.innerHTML = latexDerivada;
-        MathJax.typesetPromise([resultadoDiv])
+        //  Tentando pegar diretamente ele dá undefined
+        //  var latexDerivada = `$$f'(x) = ${passos.equacao}$$`;
+
+        // var latexDerivada = JSON.stringify(passos, null, 2)
+
+        // Insira a expressão LaTeX na div de 
+        
+        // resultadoDiv.innerHTML = latexDerivada;
+        MathJax.typesetPromise([passoDiv])
             .catch(function (err) {
                 console.log('Erro ao renderizar a fórmula:', err);
         });
