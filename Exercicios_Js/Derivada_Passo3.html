@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Derivada</title>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/10.4.0/math.min.js"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+    <input type="text" id="userInput" placeholder="Digite a função">
+    <button onclick="calcularDerivada()">Calcular</button>
+    <div id="resultadoDiv"> Testando div </div>
+
+    <script>
+    function calcularDerivada() {
+        // ... your existing code ...
+
+        // Iterate over each passo and append it to the resultadoDiv
+        passos.forEach(passo => {
+            // Create a new div for this passo
+            let passoDiv = document.createElement('div');
+
+            // Set the text of the passoDiv to the descricao and equacao of the passo
+            // Format the equacao as a LaTeX equation
+            passoDiv.innerHTML = `${passo.descricao} $$${passo.equacao}$$`;
+
+            // Append the passoDiv to the resultadoDiv
+            resultadoDiv.appendChild(passoDiv);
+
+            // Tell MathJax to typeset the new equation
+            MathJax.typesetPromise([passoDiv])
+                .catch(function (err) {
+                    console.log('Erro ao renderizar a fórmula:', err);
+            });
+        });
+    }
+    </script>
+</body>
+</html>
