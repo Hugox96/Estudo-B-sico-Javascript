@@ -43,8 +43,9 @@
             try {
                 // Calcula a derivada do termo usando math.js
                 let derivada = math.derivative(termo, 'x').toString();
+                let resultadofinal = math.derivative(userInput, 'x').toString();
 
-                passos.push({descricao: `Passo ${i+2}: A derivada de ${termo} é:`, equacao: `f'(x) = ${derivada}` });
+                passos.push({descricao: `Passo ${i+2}: A derivada de ${termo} é:`, equacao: `f'(x) = ${derivada}`, resultado: `Resultado final ${userInput}`});
             } catch (error) {
                 console.error(`Error calculating derivative of ${termo}: ${error}`);
             }
@@ -58,7 +59,7 @@
         let passoDiv = document.createElement('div');
 
         // Set the text of the passoDiv to the descricao and equacao of the passo
-        passoDiv.innerHTML = `${passo.descricao} $$${passo.equacao}$$`;
+        passoDiv.innerHTML = `${passo.descricao} $$${passo.equacao}$$ $$${passo.resultado}$$ `;
 
         // Append the passoDiv to the resultadoDiv
         resultadoDiv.appendChild(passoDiv);
