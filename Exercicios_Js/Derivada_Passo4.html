@@ -7,6 +7,14 @@
             margin: 10px;
             padding: 10px;
         }
+
+        .step_final{
+            border: 2px solid rgb(190, 36, 36);
+            margin: 4px;
+            padding: 3px;
+            width: 50%;
+            text-align: center;
+        }
     </style>
 </head>
 <body>
@@ -91,7 +99,7 @@
             });
 
         let resultado_final = document.createElement('div');
-        resultado_final.className = 'step';
+        resultado_final.className = 'step_final';
         resultado_final.textContent = derivada_final;
         finalDiv.appendChild(resultado_final)
 
