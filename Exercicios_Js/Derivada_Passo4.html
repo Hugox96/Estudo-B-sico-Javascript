@@ -14,6 +14,8 @@
     <button onclick="calcularDerivada()">Calcular</button>
     <div id="solution"></div>
     <div id="steps"></div>
+    <h2> Resultado Final </h2>
+    <div id="final"></div>
     
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/10.4.0/math.min.js"></script>
@@ -46,25 +48,30 @@
 
                     // Adicione os passos ao array allSteps
                     StepsDescriçao.push({ descricao: `Passo 1: Identifique a função: ${funcao}`},
-                                          {descricao: 'Passo 1: Aplicar a regra da soma e diferença'})
-                    StepsSolution.push({ descricao: `Passo: A derivada de ${termo} é:`, equacao: `f'(x) = ${derivada}` })
+                                        {descricao: 'Passo 1: Aplicar a regra da soma e diferença'})
+
+                    StepsSolution.push({descricao: `Passo: A derivada de ${termo} é:`, equacao: `f'(x) = ${derivada}`})
 
                     
                 } catch (error) {
                     console.error(`Error calculating derivative of ${termo}: ${error}`);
                 }
             }
+            
+        let derivada_final = math.derivative(funcao, 'x').toString();
 
             // Obtenha a div onde os passos serão exibidos
-            let stepsDiv = document.getElementById('steps');
-            let solutionDiv = document.getElementById('solution');
+        let stepsDiv = document.getElementById('steps');
+        let solutionDiv = document.getElementById('solution');
+        let finalDiv = document.getElementById('final')
 
-            // Limpe a div de passos
-            stepsDiv.innerHTML = '';
+        // Limpe a div de passos
+        stepsDiv.innerHTML = '';
 
        // Crie uma nova div para a descrição
         let descricaoDiv1 = document.createElement('div');
         let descricaoDiv2 = document.createElement("div");
+        let final = document.createElement("div")
 
         descricaoDiv1.className = 'step';
         descricaoDiv2.className = 'step';
@@ -82,6 +89,12 @@
                 passoDiv.textContent = `${passo.descricao} ${passo.equacao}`;
                 stepsDiv.appendChild(passoDiv);
             });
+
+        let resultado_final = document.createElement('div');
+        resultado_final.className = 'step';
+        resultado_final.textContent = derivada_final;
+        finalDiv.appendChild(resultado_final)
+
 
             // // Para cada passo em allSteps, crie uma nova div e adicione-a à div de passos
             // StepsSolution.forEach(passo => {
