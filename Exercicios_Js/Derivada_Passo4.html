@@ -45,7 +45,7 @@
                     let derivada = math.derivative(termo, 'x').toString();
 
                     // Adicione os passos ao array allSteps
-                    StepsDescriçao.push({ descricao: 'Passo 1: Identifique a função:', equacao: `f(x) = \\dfrac{d}{dx}(${funcao})`},
+                    StepsDescriçao.push({ descricao: `Passo 1: Identifique a função: ${funcao}`},
                                           {descricao: 'Passo 1: Aplicar a regra da soma e diferença'})
                     StepsSolution.push({ descricao: `Passo: A derivada de ${termo} é:`, equacao: `f'(x) = ${derivada}` })
 
