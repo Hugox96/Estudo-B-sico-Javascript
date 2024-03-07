@@ -45,8 +45,9 @@
                     let derivada = math.derivative(termo, 'x').toString();
 
                     // Adicione os passos ao array allSteps
+                    StepsDescriçao.push({descricao: 'Passo 3: Aplicar a regra da soma e diferença'})
                     StepsSolution.push({ descricao: `Passo ${i+2}: A derivada de ${termo} é:`, equacao: `f'(x) = ${derivada}` })
-                    StepsDescriçao.push({descricao: 'Passo 3: Aplicar a regra da soma e diferença', equacao: `f\'(x) = ${derivada.toString()}`})
+
                     
                 } catch (error) {
                     console.error(`Error calculating derivative of ${termo}: ${error}`);
@@ -60,10 +61,13 @@
             // Limpe a div de passos
             stepsDiv.innerHTML = '';
 
+            StepsDescriçao = StepsDescriçao[0]
+            console.log("aqui",StepsDescriçao)
+
             StepsDescriçao.forEach(passo => {
                 let passoDiv = document.createElement('div');
                 passoDiv.className = 'step';
-                passoDiv.textContent = `${passo.descricao} ${passo.equacao}`;
+                passoDiv.textContent = `${passo.descricao}`;
                 solutionDiv.appendChild(passoDiv);
             });
 
