@@ -12,8 +12,9 @@
 <body>
     <input type="text" id="funcao" placeholder="Digite a função">
     <button onclick="calcularDerivada()">Calcular</button>
-    <div id="steps"></div>
     <div id="solution"></div>
+    <div id="steps"></div>
+    
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/10.4.0/math.min.js"></script>
     <script>
@@ -45,7 +46,7 @@
 
                     // Adicione os passos ao array allSteps
                     StepsSolution.push({ descricao: `Passo ${i+2}: A derivada de ${termo} é:`, equacao: `f'(x) = ${derivada}` })
-                    StepsDescriçao.push({ descricao: 'Passo 1: Identifique a função:', equacao: `f(x) = \\dfrac{d}{dx}(${termo})`},)
+                    StepsDescriçao.push({descricao: 'Passo 3: Aplicar a regra da soma e diferença', equacao: `f\'(x) = ${derivada.toString()}`})
                     
                 } catch (error) {
                     console.error(`Error calculating derivative of ${termo}: ${error}`);
@@ -59,19 +60,19 @@
             // Limpe a div de passos
             stepsDiv.innerHTML = '';
 
+            StepsDescriçao.forEach(passo => {
+                let passoDiv = document.createElement('div');
+                passoDiv.className = 'step';
+                passoDiv.textContent = `${passo.descricao} ${passo.equacao}`;
+                solutionDiv.appendChild(passoDiv);
+            });
+
             // Para cada passo em allSteps, crie uma nova div e adicione-a à div de passos
             StepsSolution.forEach(passo => {
                 let passoDiv = document.createElement('div');
                 passoDiv.className = 'step';
                 passoDiv.textContent = `${passo.descricao} ${passo.equacao}`;
                 stepsDiv.appendChild(passoDiv);
-            });
-
-            StepsDescriçao.forEach(passo => {
-                let passoDiv = document.createElement('div');
-                passoDiv.className = 'step';
-                passoDiv.textContent = `${passo.descricao} ${passo.equacao}`;
-                solutionDiv.appendChild(passoDiv);
             });
         }
     </script>
