@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .step {
+            border: 1px solid black;
+            margin: 10px;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" id="funcao" placeholder="Digite a função">
+    <button onclick="calcularDerivada()">Calcular</button>
+    <div id="steps"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/10.4.0/math.min.js"></script>
+    <script>
+        function calcularDerivada() {
+            // Recupere a entrada do usuário
+            var funcao = document.getElementById('funcao').value;
+
+            // Adicione espaços em torno dos operadores '+' e '-'
+            funcao = funcao.replace(/\+/g, ' + ').replace(/\-/g, ' - ');
+
+            // Divida a função em termos
+            let termos = funcao.split(' ');
+
+            // Declare um array vazio para guardar os passos
+            let allSteps = [];
+
+            for (let i = 0; i < termos.length; i++) {
+                let termo = termos[i];
+
+                // Ignore non-term strings
+                if (termo.trim() === '' || termo.trim() === '+' || termo.trim() === '-') {
+                    continue;
+                }
+
+                try {
+                    // Calcula a derivada do termo usando math.js
+                    let derivada = math.derivative(termo, 'x').toString();
+
+                    // Adicione os passos ao array allSteps
+                    allSteps.push({ descricao: `Passo ${i+2}: A derivada de ${termo} é:`, equacao: `f'(x) = ${derivada}` });
+                } catch (error) {
+                    console.error(`Error calculating derivative of ${termo}: ${error}`);
+                }
+            }
+
+            // Obtenha a div onde os passos serão exibidos
+            let stepsDiv = document.getElementById('steps');
+
+            // Limpe a div de passos
+            stepsDiv.innerHTML = '';
+
+            // Para cada passo em allSteps, crie uma nova div e adicione-a à div de passos
+            allSteps.forEach(passo => {
+                let passoDiv = document.createElement('div');
+                passoDiv.className = 'step';
+                passoDiv.textContent = `${passo.descricao} ${passo.equacao}`;
+                stepsDiv.appendChild(passoDiv);
+            });
+        }
+    </script>
+</body>
+</html>
