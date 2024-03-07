@@ -45,8 +45,9 @@
                     let derivada = math.derivative(termo, 'x').toString();
 
                     // Adicione os passos ao array allSteps
-                    StepsDescriçao.push({descricao: 'Passo 3: Aplicar a regra da soma e diferença'})
-                    StepsSolution.push({ descricao: `Passo ${i+2}: A derivada de ${termo} é:`, equacao: `f'(x) = ${derivada}` })
+                    StepsDescriçao.push({ descricao: 'Passo 1: Identifique a função:', equacao: `f(x) = \\dfrac{d}{dx}(${funcao})`},
+                                          {descricao: 'Passo 1: Aplicar a regra da soma e diferença'})
+                    StepsSolution.push({ descricao: `Passo: A derivada de ${termo} é:`, equacao: `f'(x) = ${derivada}` })
 
                     
                 } catch (error) {
@@ -62,10 +63,17 @@
             stepsDiv.innerHTML = '';
 
        // Crie uma nova div para a descrição
-        let descricaoDiv = document.createElement('div');
-        descricaoDiv.className = 'step';
-        descricaoDiv.textContent = StepsDescriçao[0].descricao;
-        solutionDiv.appendChild(descricaoDiv);
+        let descricaoDiv1 = document.createElement('div');
+        let descricaoDiv2 = document.createElement("div");
+
+        descricaoDiv1.className = 'step';
+        descricaoDiv2.className = 'step';
+
+        descricaoDiv1.textContent = StepsDescriçao[0].descricao;
+        descricaoDiv2.textContent = StepsDescriçao[1].descricao;
+
+        solutionDiv.appendChild(descricaoDiv1);
+        solutionDiv.appendChild(descricaoDiv2)
 
        // Para cada passo em StepsSolution, crie uma nova div e adicione-a à div de passos
             StepsSolution.forEach(passo => {
