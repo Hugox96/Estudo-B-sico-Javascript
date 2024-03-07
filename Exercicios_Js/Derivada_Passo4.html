@@ -61,23 +61,27 @@
             // Limpe a div de passos
             stepsDiv.innerHTML = '';
 
-            StepsDescriçao = StepsDescriçao[0]
-            console.log("aqui",StepsDescriçao)
+       // Crie uma nova div para a descrição
+        let descricaoDiv = document.createElement('div');
+        descricaoDiv.className = 'step';
+        descricaoDiv.textContent = StepsDescriçao[0].descricao;
+        solutionDiv.appendChild(descricaoDiv);
 
-            StepsDescriçao.forEach(passo => {
-                let passoDiv = document.createElement('div');
-                passoDiv.className = 'step';
-                passoDiv.textContent = `${passo.descricao}`;
-                solutionDiv.appendChild(passoDiv);
-            });
-
-            // Para cada passo em allSteps, crie uma nova div e adicione-a à div de passos
+       // Para cada passo em StepsSolution, crie uma nova div e adicione-a à div de passos
             StepsSolution.forEach(passo => {
                 let passoDiv = document.createElement('div');
                 passoDiv.className = 'step';
                 passoDiv.textContent = `${passo.descricao} ${passo.equacao}`;
                 stepsDiv.appendChild(passoDiv);
             });
+
+            // // Para cada passo em allSteps, crie uma nova div e adicione-a à div de passos
+            // StepsSolution.forEach(passo => {
+            //     let passoDiv = document.createElement('div');
+            //     passoDiv.className = 'step';
+            //     passoDiv.textContent = `${passo.descricao} ${passo.equacao}`;
+            //     stepsDiv.appendChild(passoDiv);
+            // });
         }
     </script>
 </body>
