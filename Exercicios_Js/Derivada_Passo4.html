@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <!-- Criando o style css para estilizar a pagina -->
     <style>
         .step {
             border: 1px solid black;
@@ -21,6 +22,7 @@
 <body>
     <input type="text" id="funcao" placeholder="Digite a função">
     <button onclick="calcularDerivada()">Calcular</button>
+    <!-- Criando as ids para solução, passos e resultado final -->
     <div id="solution"></div>
     <div id="steps"></div>
     <h2> Resultado Final </h2>
@@ -39,7 +41,7 @@
             // Divida a função em termos
             let termos = funcao.split(' ');
 
-            // Declare um array vazio para guardar os passos
+            // Criando os arrays para solução e descrição. Dessa forma eu posso salvá-los separadamente e mostrar na tela de forma organizada
             let StepsSolution = [];
             let StepsDescriçao = [];
 
@@ -55,10 +57,10 @@
                     // Calcula a derivada do termo usando math.js
                     let derivada = math.derivative(termo, 'x').toString();
 
-                    // Adicione os passos ao array allSteps
+                    // Adicione os passos ao StepsDescrição, nesse caso o array ficará responsavel pela descrição
                     StepsDescriçao.push({ descricao: `Passo 1: Identifique a função: ${funcao}`},
                                         {descricao: 'Passo 1: Aplicar a regra da soma e diferença'})
-
+                    // Adicione os passos no array StepsSolution, nesse salvando o resultado para cada termo da expressão 
                     StepsSolution.push({descricao: `Passo: A derivada de ${termo} é:`, equacao: `f'(x) = ${derivada}`})
 
                     
