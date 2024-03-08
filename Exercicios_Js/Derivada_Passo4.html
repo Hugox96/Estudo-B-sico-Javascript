@@ -68,10 +68,10 @@
                     console.error(`Error calculating derivative of ${termo}: ${error}`);
                 }
             }
-            
+        // Calculando a derivada final 
         let derivada_final = math.derivative(funcao, 'x').toString();
 
-        // Obtenha a div onde os passos serão exibidos
+        // Obtenha a div em relação ao ID onde os passos serão exibidos 
         let stepsDiv = document.getElementById('steps');
         let solutionDiv = document.getElementById('solution');
         let finalDiv = document.getElementById('final')
@@ -79,21 +79,24 @@
         // Limpe a div de passos
         stepsDiv.innerHTML = '';
 
-       // Crie uma nova div para a descrição
+       // Crie uma nova div para a descrição descriçã1
         let descricaoDiv1 = document.createElement('div');
         let descricaoDiv2 = document.createElement("div");
         let final = document.createElement("div")
 
+        // Atribuindo o nome da classe css step às descrições
         descricaoDiv1.className = 'step';
         descricaoDiv2.className = 'step';
-
+        
+        // Criando o texto para aparecer na div, sendo 0 o 1º texto do arry e 1 o 2º texto do array
         descricaoDiv1.textContent = StepsDescriçao[0].descricao;
         descricaoDiv2.textContent = StepsDescriçao[1].descricao;
-
+        
+        // Fazendo o append na div para aparecer na tela    
         solutionDiv.appendChild(descricaoDiv1);
         solutionDiv.appendChild(descricaoDiv2)
 
-       // Para cada passo em StepsSolution, crie uma nova div e adicione-a à div de passos
+           // Para cada passo em StepsSolution, crie uma nova div e adicione-a à div de passos
             StepsSolution.forEach(passo => {
                 let passoDiv = document.createElement('div');
                 passoDiv.className = 'step';
