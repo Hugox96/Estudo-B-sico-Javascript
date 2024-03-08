@@ -96,14 +96,15 @@
         solutionDiv.appendChild(descricaoDiv1);
         solutionDiv.appendChild(descricaoDiv2)
 
-           // Para cada passo em StepsSolution, crie uma nova div e adicione-a à div de passos
-            StepsSolution.forEach(passo => {
-                let passoDiv = document.createElement('div');
-                passoDiv.className = 'step';
-                passoDiv.textContent = `${passo.descricao} ${passo.equacao}`;
-                stepsDiv.appendChild(passoDiv);
-            });
+        // Para cada passo em StepsSolution, crie uma nova div e adicione-a à div de passos
+        StepsSolution.forEach(passo => {
+            let passoDiv = document.createElement('div');
+            passoDiv.className = 'step';
+            passoDiv.textContent = `${passo.descricao} ${passo.equacao}`;
+            stepsDiv.appendChild(passoDiv);
+        });
 
+        // Criando uma ultima div para aparecer o resultado final
         let resultado_final = document.createElement('div');
         resultado_final.className = 'step_final';
         resultado_final.textContent = derivada_final;
