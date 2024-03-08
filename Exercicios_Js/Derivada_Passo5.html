@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Criando o style css para estilizar a pagina -->
+    <style>
+        .step {
+            border: 1px solid black;
+            margin: 10px;
+            padding: 10px;
+        }
+
+        .step_final{
+            border: 2px solid rgb(190, 36, 36);
+            margin: 4px;
+            margin-left: 25%;
+            padding: 3px;
+            width: 50%;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" id="funcao" placeholder="Digite a função">
+    <button onclick="calcularDerivada()">Calcular</button>
+    <!-- Criando as ids para solução, passos e resultado final -->
+    <div id="solution"></div>
+    <div id="steps"></div>
+    <h2> Resultado Final </h2>
+    <div id="final"></div>
+    
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/10.4.0/math.min.js"></script>
+    <script>
+       function getFuncao() {
+    var funcao = document.getElementById('funcao').value;
+    funcao = funcao.replace(/\+/g, ' + ').replace(/\-/g, ' - ');
+    return funcao.split(' ');
+}
+
+function calcularDerivadaTermo(termo) {
+    try {
+        return math.derivative(termo, 'x').toString();
+    } catch (error) {
+        console.error(`Error calculating derivative of ${termo}: ${error}`);
+    }
+}
+
+function criarDiv(descricao, equacao) {
+    let div = document.createElement('div');
+    div.className = 'step';
+    div.textContent = `${descricao} ${equacao}`;
+    return div;
+}
+
+function calcularDerivada() {
+    let termos = getFuncao();
+    let stepsDiv = document.getElementById('steps');
+    let solutionDiv = document.getElementById('solution');
+    let finalDiv = document.getElementById('final')
+
+    stepsDiv.innerHTML = '';
+
+    for (let i = 0; i < termos.length; i++) {
+        let termo = termos[i];
+        if (termo.trim() === '' || termo.trim() === '+' || termo.trim() === '-') {
+            continue;
+        }
+
+        let derivada = calcularDerivadaTermo(termo);
+        let descricaoDiv = criarDiv(`Passo: A derivada de ${termo} é:`, `f'(x) = ${derivada}`);
+        stepsDiv.appendChild(descricaoDiv);
+    }
+
+    let derivada_final = math.derivative(termos.join(' '), 'x').toString();
+    let resultado_final = criarDiv('A derivada final é:', derivada_final);
+    finalDiv.appendChild(resultado_final);
+}
+
+        
+    </script>
+</body>
+</html>
