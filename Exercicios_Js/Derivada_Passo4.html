@@ -11,6 +11,7 @@
         .step_final{
             border: 2px solid rgb(190, 36, 36);
             margin: 4px;
+            margin-left: 25%;
             padding: 3px;
             width: 50%;
             text-align: center;
@@ -68,7 +69,7 @@
             
         let derivada_final = math.derivative(funcao, 'x').toString();
 
-            // Obtenha a div onde os passos serão exibidos
+        // Obtenha a div onde os passos serão exibidos
         let stepsDiv = document.getElementById('steps');
         let solutionDiv = document.getElementById('solution');
         let finalDiv = document.getElementById('final')
@@ -102,15 +103,6 @@
         resultado_final.className = 'step_final';
         resultado_final.textContent = derivada_final;
         finalDiv.appendChild(resultado_final)
-
-
-            // // Para cada passo em allSteps, crie uma nova div e adicione-a à div de passos
-            // StepsSolution.forEach(passo => {
-            //     let passoDiv = document.createElement('div');
-            //     passoDiv.className = 'step';
-            //     passoDiv.textContent = `${passo.descricao} ${passo.equacao}`;
-            //     stepsDiv.appendChild(passoDiv);
-            // });
         }
     </script>
 </body>
