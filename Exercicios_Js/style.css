@@ -1,0 +1,105 @@
+/* Cores */
+
+body {
+    background-color: #f7f7f7;
+    color: #333;
+}
+
+h1, h2, h3 {
+    color: #000;
+}
+
+a {
+    color: #0073b7;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Tipografia */
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    font-size: 2em;
+    font-weight: bold;
+}
+
+h2 {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+h3 {
+    font-size: 1em;
+    font-weight: bold;
+}
+
+p {
+    line-height: 1.5em;
+}
+
+/* Layout */
+
+header {
+    background-color: #0073b7;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+header img {
+    width: 100px;
+    height: auto;
+}
+
+main {
+    padding: 20px;
+}
+
+section {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    padding: 5px;
+}
+
+footer {
+    background-color: #0073b7;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+/* Classes específicas */
+
+.biografia {
+    text-align: justify;
+}
+
+.habilidades {
+    list-style: circle;
+}
+
+.batalhas {
+    list-style: square;
+}
+
+/* Imagens */
+
+img {
+    max-width: 100%;
+    height: auto;
+}
