@@ -88,7 +88,7 @@
         descricaoDiv1.className = 'step';
         descricaoDiv2.className = 'step';
         
-        // Criando o texto para aparecer na div, sendo 0 o 1º texto do arry e 1 o 2º texto do array
+        // Criando o texto para aparecer na div, sendo 0 o 1º texto do array e 1 o 2º texto do array
         descricaoDiv1.textContent = StepsDescriçao[0].descricao;
         descricaoDiv2.textContent = StepsDescriçao[1].descricao;
         
@@ -104,10 +104,12 @@
             stepsDiv.appendChild(passoDiv);
         });
         
-        // O método forEach é usado para iterar sobre cada item em um array. 
-        // No caso do StepsSolution, como ele é um array que contém a derivada de cada termo, usamos forEach para criar uma nova div para cada derivada.
-        // Por outro lado, StepsDescriçao é um array que contém descrições que você quer que sejam fixas. 
-        // Portanto, você está acessando diretamente cada descrição pelo seu índice no array (por exemplo, StepsDescriçao[0].descricao) em vez de usar forEach.
+        // // O método forEach é usado para iterar sobre cada item em um array. 
+        // // No caso do StepsSolution, como ele é um array que contém a derivada de cada termo, 
+        // usamos forEach para criar uma nova div para cada derivada.
+        // // Por outro lado, StepsDescriçao é um array que contém descrições que você quer que sejam fixas. 
+        // // Portanto, você está acessando diretamente cada descrição pelo seu índice no array
+        // (por exemplo, StepsDescriçao[0].descricao) em vez de usar forEach.
                 
        // Criando uma ultima div para aparecer o resultado final
         let resultado_final = document.createElement('div');
