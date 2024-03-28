@@ -16,7 +16,7 @@ console.log("depois", saudacao)
 
 // neste caso dará erro pq estamos tentando chamar hello fora do escopo do if
 let greeting = "say Hi";
-   let times = 4;
+let times = 4;
 
    if (times > 3) {
         let hello = "say Hello instead";
