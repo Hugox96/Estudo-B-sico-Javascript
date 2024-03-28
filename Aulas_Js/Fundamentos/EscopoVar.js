@@ -32,3 +32,16 @@ let greetin = "say Hi";
         console.log(greetin); // retornará "say Hello instead"
     }
 console.log(greetin); // retornará "say Hi"
+
+
+// Utilizando em funções
+function teste() {
+    for ( var x = 10 ; x < 20 ; x++ ) { // x é acessível em qualquer lugar dentro da função
+        var y = 42; // y é acessível em qualquer lugar dentro da função
+    }
+}
+
+for ( var x = 10 ; x < 20 ; x++ ) { // x é globalmente acessível
+    var y = 42;
+    console.log(y) // y é globalmente acessível
+}
