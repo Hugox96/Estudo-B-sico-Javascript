@@ -14,7 +14,7 @@ if(times > 3){
 console.log("depois", saudacao)
 
 
-// neste caso dará erro pq estamos tentando chamar hello fora do escopo do if
+// Neste caso dará erro pq estamos tentando chamar hello fora do escopo do if
 let greeting = "say Hi";
 let times = 4;
 
@@ -23,3 +23,12 @@ let times = 4;
         console.log(hello);// dirá "say Hello instead"
     }
    console.log(hello) // hello não está definido
+
+
+//Aqui não dará erro pq não está chamada fora do escopo
+let greetin = "say Hi";
+    if (true) {
+        let greetin = "say Hello instead";
+        console.log(greetin); // retornará "say Hello instead"
+    }
+console.log(greetin); // retornará "say Hi"
